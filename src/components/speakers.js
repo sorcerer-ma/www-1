@@ -4,7 +4,7 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 
 const SpeakersContainer = styled.div`
   text-align: center;
-  padding: 10rem 0;
+  padding: 10rem 0 4rem 0;
 `
 
 const SpeakersTitle = styled.h2`
@@ -136,11 +136,11 @@ const SpeakersList = () => (
 
 const Speakers = () => (
   <SpeakersContainer id="speakers" className="section speakers">
-    <SpeakersTitle>演讲嘉宾</SpeakersTitle>
+    <SpeakersTitle>大会嘉宾</SpeakersTitle>
     <SpeakersList />
     <SpeakersDivider />
     <SpeakersText>加入 ECUG，和业界大牛一起解锁 ABC 实践新姿势，更有机会与偶像大咖共进晚餐哦 ！</SpeakersText>
-    <SpeakersButton href="https://www.gatsbyjs.org/docs/styled-components/" target="_blank">
+    <SpeakersButton href="https://jinshuju.net/f/ekx9yn" target="_blank">
       报名成为讲师
     </SpeakersButton>
   </SpeakersContainer>

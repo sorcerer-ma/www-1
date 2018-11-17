@@ -18,7 +18,7 @@ const PreviousTitle = styled.h4`
 `
 
 const PreviousInner = styled.div`
-  width: 90%;
+  width: 95%;
   max-width: 1080px;
   margin: 0 auto;
 `

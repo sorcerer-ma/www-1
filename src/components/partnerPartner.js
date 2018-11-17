@@ -1,13 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
 
-import { PartnersTitle, PartnersListWrapper, PartnerLogo } from './partners'
-
-const PartnersItem = styled.div`
-  margin-bottom: 8rem;
-  width: 33.333%;
-`
+import { PartnersTitle, PartnersListWrapper, PartnersItem, PartnerLogo } from './partners'
 
 const PartnerPartner = () => (
   <StaticQuery

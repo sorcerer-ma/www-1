@@ -9,7 +9,7 @@ import PartnerRegister from './partnerRegister'
 
 const PartnersContainer = styled.div`
   text-align: center;
-  padding: 10rem 0;
+  padding: 0 0 10rem 0;
 `
 
 export const PartnersTitle = styled.h2`
@@ -17,55 +17,33 @@ export const PartnersTitle = styled.h2`
   color: #540cfa;
   text-align: center;
   line-height: 6rem;
-  margin-bottom: 8.5rem;
+  margin: 8rem 0;
+
+  @media (max-width: 480px) {
+    margin: 5rem 0;
+  }
 `
 
 export const PartnersListWrapper = styled.div`
   display: -webkit-flex; /* Safari */
   display: flex;
   flex-wrap: wrap;
-
-  &:after {
-    content: '';
-    flex: auto;
-  }
-
-  @media (min-width: 1280px) {
-    margin: 0 11rem;
-  }
+  justify-content: center;
 `
 
 export const PartnersItem = styled.div`
-  margin-bottom: 8rem;
+  width: 220px;
+  margin: 0 6rem 8rem 6rem;
 
-  @media (min-width: 1400px) {
-    width: 20%;
-  }
-
-  @media (max-width: 1399px) and (min-width: 1280px) {
-    width: 25%;
-  }
-
-  @media (max-width: 1279px) and (min-width: 0px) {
-    width: 33.333%;
+  @media (max-width: 480px) {
+    width: 90px;
+    margin: 0 1rem 2rem 1rem;
   }
 `
 
 export const PartnerLogo = styled.img`
-  @media (min-width: 1280px) {
-    width: 220px;
-    height: 110px;
-  }
-
-  @media (max-width: 1279px) and (min-width: 700px) {
-    width: 192px;
-    height: 96px;
-  }
-
-  @media (max-width: 699px) {
-    width: 96px;
-    height: 48px;
-  }
+  width: 100%;
+  height: auto;
 `
 
 const Partners = () => (

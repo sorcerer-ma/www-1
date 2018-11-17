@@ -1,16 +1,16 @@
 import React from 'react'
 
 import logo from '../images/msup.png'
-import { PartnersTitle, PartnerLogo } from './partners'
+import { PartnersTitle, PartnersListWrapper, PartnersItem, PartnerLogo } from './partners'
 
 const PartnersThanks = () => (
   <React.Fragment>
     <PartnersTitle>特别鸣谢</PartnersTitle>
-    <div>
-      <div style={{ margin: '0 auto 80px auto' }}>
+    <PartnersListWrapper>
+      <PartnersItem>
         <PartnerLogo src={logo} alt="麦思博" title="麦思博" />
-      </div>
-    </div>
+      </PartnersItem>
+    </PartnersListWrapper>
   </React.Fragment>
 )
 

@@ -37,7 +37,7 @@ export const PartnersItem = styled.div`
 
   @media (max-width: 480px) {
     width: 90px;
-    margin: 0 1rem 2rem 1rem;
+    margin: 0 1rem 4rem 1rem;
   }
 `
 

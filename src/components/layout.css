@@ -1,7 +1,12 @@
 html {
   font-size: 10px;
-  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei',
-    'WenQuanYi Micro Hei', Helvetica, Tahoma, Arial, sans-serif;
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'WenQuanYi Micro Hei', Helvetica,
+    Tahoma, Arial, sans-serif;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
 }
 
 @media only screen and (max-width: 480px) {

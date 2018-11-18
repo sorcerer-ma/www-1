@@ -39,9 +39,7 @@ const Layout = ({ children }) => (
               content: data.site.siteMetadata.keywords.join(','),
             },
           ]}
-          link={[
-            { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` },
-          ]}
+          link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
         >
           <html lang="zh-CN" />
         </Helmet>
@@ -54,6 +52,7 @@ const Layout = ({ children }) => (
             maxWidth: 1920,
             padding: '0',
             paddingTop: 0,
+            scrollBehavior: 'smooth',
           }}
         >
           {children}

@@ -47,7 +47,7 @@ export const PartnerLogo = styled.img`
 `
 
 const Partners = () => (
-  <PartnersContainer id="partners" className="section partners">
+  <PartnersContainer className="section partners">
     <PartnerOrganizer />
     <PartnerThanks />
     <PartnerPartner />

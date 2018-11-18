@@ -188,7 +188,7 @@ const AgendaList = () => (
 )
 
 const Agenda = () => (
-  <AgendaContainer id="agenda" className="section agenda">
+  <AgendaContainer className="section agenda">
     <AgendaTitle>大会议程</AgendaTitle>
     <AgendaList />
   </AgendaContainer>

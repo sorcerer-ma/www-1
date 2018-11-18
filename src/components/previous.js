@@ -53,7 +53,7 @@ class Previous extends React.Component {
   render() {
     let { windowWidth } = this.state
     return (
-      <PreviousContainer id="previous" className="section previous">
+      <PreviousContainer className="section previous">
         <PreviousTitle>ECUG 历届回顾</PreviousTitle>
         <PreviousInner>
           {windowWidth > 1080 ? (

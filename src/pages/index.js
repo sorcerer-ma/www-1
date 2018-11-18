@@ -12,10 +12,18 @@ const IndexPage = () => (
   <Layout>
     <Banner />
     <Themes />
-    <Speakers />
-    <Agenda />
-    <Previous />
-    <Partners />
+    <div id="speakers">
+      <Speakers />
+    </div>
+    <div id="agenda">
+      <Agenda />
+    </div>
+    <div id="previous">
+      <Previous />
+    </div>
+    <div id="partners">
+      <Partners />
+    </div>
   </Layout>
 )
 

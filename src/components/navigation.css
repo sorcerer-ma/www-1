@@ -4,8 +4,8 @@
   left: 0;
   width: 100%;
   height: 88px;
-  background: rgba(255,255,255,0.97);
-  box-shadow: 0 1px 0 0 rgba(0,0,0,0.10);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
 
@@ -20,7 +20,7 @@
   margin: 0;
   line-height: 88px;
   font-size: 1.8rem;
-  color: #3C64DC;
+  color: #3c64dc;
   font-weight: bold;
 }
 
@@ -39,7 +39,8 @@
   padding: 0 10px;
 }
 
-.navigation .nav li a {
+.navigation .nav li a,
+.navigation .nav li span {
   display: inline-block;
   padding: 7px 12px;
   line-height: 74px;
@@ -50,13 +51,13 @@
   font-weight: 500;
 }
 .navigation .nav li.selected a {
-  color: #540CFA;
+  color: #540cfa;
   padding-bottom: 0;
-  border-bottom: 7px solid #540CFA;
+  border-bottom: 7px solid #540cfa;
 }
 
 .navigation .nav li a:hover {
-  color: #540CFA;
+  color: #540cfa;
 }
 
 .navigation .button {
@@ -73,7 +74,7 @@
   display: block;
   width: 32px;
   height: 3px;
-  background-color: #540CFA;
+  background-color: #540cfa;
   border-radius: 2px;
   position: absolute;
   left: 0;
@@ -114,7 +115,7 @@
 }
 
 .navigation .mobile-nav li.selected a {
-  color: #540CFA;
+  color: #540cfa;
 }
 
 .navigation .overlay {

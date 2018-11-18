@@ -129,7 +129,7 @@ const BuyTicketsButton = styled.a`
 `
 
 const Banner = () => (
-  <BannerContainer>
+  <BannerContainer className="section banner">
     <BannerInfo>
       <BannerTitle>
         ECUG Con 2018

@@ -125,7 +125,7 @@ const data = [
 ]
 
 const Themes = () => (
-  <ThemesContainer id="themes" className="section themes">
+  <ThemesContainer className="section themes">
     <ThemesTitle>ECUG Con 五大技术主题</ThemesTitle>
     <ThemesInner className="clearfix">
       {data.map(d => (

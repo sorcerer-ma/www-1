@@ -135,7 +135,7 @@ const SpeakersList = () => (
 )
 
 const Speakers = () => (
-  <SpeakersContainer id="speakers" className="section speakers">
+  <SpeakersContainer className="section speakers">
     <SpeakersTitle>大会嘉宾</SpeakersTitle>
     <SpeakersList />
     <SpeakersDivider />

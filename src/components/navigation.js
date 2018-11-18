@@ -14,7 +14,7 @@ class Navigation extends React.Component {
   }
 
   render() {
-    let { showNav } = this.state
+    // let { showNav } = this.state
     return (
       <nav className="navigation clearfix">
         <img className="logo" src={logo} alt="Logo" />
@@ -24,16 +24,16 @@ class Navigation extends React.Component {
             <Link to="/">首页</Link>
           </li>
           <li>
-            <Link to="#schedule">大会议程</Link>
-          </li>
-          <li>
             <Link to="#speakers">演讲嘉宾</Link>
           </li>
           <li>
-            <Link to="#partners">合作伙伴</Link>
+            <Link to="#agenda">大会议程</Link>
           </li>
           <li>
             <Link to="#previous">历届回顾</Link>
+          </li>
+          <li>
+            <Link to="#partners">合作伙伴</Link>
           </li>
         </ul>
         <div className="button" onClick={this.toggleButton}>
@@ -41,26 +41,6 @@ class Navigation extends React.Component {
           <span className="line-2" />
           <span className="line-3" />
         </div>
-        {showNav && (
-          <ul className="mobile-nav">
-            <li>
-              <Link to="/">首页</Link>
-            </li>
-            <li>
-              <Link to="#schedule">大会议程</Link>
-            </li>
-            <li>
-              <Link to="#speakers">演讲嘉宾</Link>
-            </li>
-            <li>
-              <Link to="#partners">合作伙伴</Link>
-            </li>
-            <li>
-              <Link to="#previous">历届回顾</Link>
-            </li>
-          </ul>
-        )}
-        {showNav && <div className="overlay" />}
       </nav>
     )
   }

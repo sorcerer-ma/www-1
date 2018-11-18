@@ -5,7 +5,7 @@ import previousWeb from '../images/prevw.png'
 import previousMobile from '../images/prevm.png'
 
 const PreviousContainer = styled.div`
-  padding: 8rem 0;
+  padding: 10rem 0;
   background-image: linear-gradient(45deg, #1833af 0%, #723cc1 100%);
   text-align: center;
 `
@@ -15,6 +15,7 @@ const PreviousTitle = styled.h4`
   color: #fff;
   text-align: center;
   line-height: 6rem;
+  margin: 0 0 4rem 0;
 `
 
 const PreviousInner = styled.div`

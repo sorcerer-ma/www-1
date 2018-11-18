@@ -9,7 +9,7 @@ import PartnerRegister from './partnerRegister'
 
 const PartnersContainer = styled.div`
   text-align: center;
-  padding: 10rem 0;
+  padding: 2rem 0 10rem 0;
 `
 
 export const PartnersTitle = styled.h2`

@@ -4,11 +4,6 @@ html {
     Tahoma, Arial, sans-serif;
 }
 
-html,
-body {
-  scroll-behavior: smooth;
-}
-
 @media only screen and (max-width: 480px) {
   html {
     font-size: 7.5px;

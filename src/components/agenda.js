@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
 const AgendaContainer = styled.div`
-  padding: 8rem 0;
+  padding: 10rem 0;
   width: 90%;
   max-width: 1080px;
   margin: 0 auto;
@@ -68,10 +68,6 @@ const LectrueSpeaker = styled.span`
   font-weight: 500;
   font-size: 2rem;
   line-height: 4rem;
-
-  @media (max-width: 480px) {
-    font-size: 1.5rem;
-  }
 `
 
 const LectrueSpeakerTitle = styled.span`
@@ -79,10 +75,6 @@ const LectrueSpeakerTitle = styled.span`
   color: #fff;
   font-size: 2rem;
   line-height: 4rem;
-
-  @media (max-width: 480px) {
-    font-size: 1.5rem;
-  }
 `
 
 const LectrueSubtitleWrap = styled.div`
@@ -94,7 +86,6 @@ const LectrueSubtitleWrap = styled.div`
 
   @media (max-width: 480px) {
     padding: 1rem 2rem;
-    font-size: 1.5rem;
   }
 `
 
@@ -108,10 +99,6 @@ const WorkshopTitleWrap = styled.div`
   color: #fff;
   font-size: 2rem;
   line-height: 4rem;
-
-  @media (max-width: 480px) {
-    font-size: 1.5rem;
-  }
 `
 
 const WorkshopSubtitleWrap = styled.div`
@@ -120,10 +107,6 @@ const WorkshopSubtitleWrap = styled.div`
   color: #000;
   font-size: 2rem;
   line-height: 4rem;
-
-  @media (max-width: 480px) {
-    font-size: 1.5rem;
-  }
 `
 
 const AgendaList = () => (

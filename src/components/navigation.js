@@ -14,34 +14,48 @@ class Navigation extends React.Component {
   }
 
   render() {
-    // let { showNav } = this.state
+    let navs = [
+      { name: '首页', location: '/' },
+      { name: '演讲嘉宾', location: '#speakers' },
+      { name: '大会议程', location: '#agenda' },
+      { name: '历届回顾', location: '#previous' },
+      { name: '合作伙伴', location: '#partners' },
+    ]
+
+    let { showNav } = this.state
     return (
-      <nav className="navigation clearfix">
-        <img className="logo" src={logo} alt="Logo" />
-        <h1 className="title">Effective Cloud User Group</h1>
-        <ul className="nav">
-          <li>
-            <Link to="/">首页</Link>
-          </li>
-          <li>
-            <Link to="#speakers">演讲嘉宾</Link>
-          </li>
-          <li>
-            <Link to="#agenda">大会议程</Link>
-          </li>
-          <li>
-            <Link to="#previous">历届回顾</Link>
-          </li>
-          <li>
-            <Link to="#partners">合作伙伴</Link>
-          </li>
-        </ul>
-        <div className="button" onClick={this.toggleButton}>
-          <span className="line-1" />
-          <span className="line-2" />
-          <span className="line-3" />
-        </div>
-      </nav>
+      <div className="navigation-wrap">
+        <nav className="navigation clearfix">
+          <Link to="/">
+            <img className="logo" src={logo} alt="Logo" />
+          </Link>
+          <h1 className="title">Effective Cloud User Group</h1>
+          <ul className="nav">
+            {navs.map((n, i) => (
+              <li key={i}>
+                <Link to={n.location}>{n.name}</Link>
+              </li>
+            ))}
+          </ul>
+          <div className="button" onClick={this.toggleButton}>
+            <span className="line-1" />
+            <span className="line-2" />
+            <span className="line-3" />
+          </div>
+          {showNav && (
+            <ul className="mobile-nav">
+              {navs.map((n, i) => (
+                <li key={i}>
+                  <Link to={n.location} onClick={this.toggleButton}>
+                    {n.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </nav>
+        {showNav && <div className="overlay" />}
+      </div>
     )
   }
 }

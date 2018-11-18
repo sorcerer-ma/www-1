@@ -52,7 +52,7 @@ const BannerDivider = styled.div`
   width: 384px;
   margin: 4rem 0;
 
-  @media (max-width: 383px) {
+  @media (max-width: 480px) {
     width: 90%;
   }
 `

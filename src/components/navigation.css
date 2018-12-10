@@ -1,0 +1,161 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 88px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.navigation .logo {
+  float: left;
+  height: 48px;
+  margin: 20px;
+}
+
+.navigation .title {
+  float: left;
+  margin: 0;
+  line-height: 88px;
+  font-size: 1.8rem;
+  color: #3c64dc;
+  font-weight: bold;
+}
+
+.navigation .nav {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  left: 50%;
+  margin-left: -272px;
+  list-style: none;
+}
+
+.navigation .nav li {
+  float: left;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.navigation .nav li a,
+.navigation .nav li span {
+  display: inline-block;
+  padding: 7px 12px;
+  line-height: 74px;
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+.navigation .nav li.selected a {
+  color: #540cfa;
+  padding-bottom: 0;
+  border-bottom: 7px solid #540cfa;
+}
+
+.navigation .nav li a:hover {
+  color: #540cfa;
+}
+
+.navigation .button {
+  display: none;
+  width: 32px;
+  height: 25px;
+  position: absolute;
+  top: 21px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.navigation .button span {
+  display: block;
+  width: 32px;
+  height: 3px;
+  background-color: #540cfa;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+}
+
+.navigation .button span.line-1 {
+  top: 0px;
+}
+
+.navigation .button span.line-2 {
+  top: 11px;
+}
+
+.navigation .button span.line-3 {
+  top: 22px;
+}
+
+.navigation .mobile-nav {
+  display: none;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 69px;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.navigation .mobile-nav li a {
+  display: block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #000000;
+  padding: 20px 30px;
+  font-weight: 500;
+}
+
+.navigation .mobile-nav li.selected a {
+  color: #540cfa;
+}
+
+.navigation-wrap .overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 69px;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.2;
+}
+
+@media (max-width: 1279px) {
+  .navigation {
+    height: 68px;
+  }
+
+  .navigation .nav {
+    display: none;
+  }
+
+  .navigation .logo {
+    height: 28px;
+    margin: 20px 10px;
+  }
+
+  .navigation .title {
+    line-height: 68px;
+  }
+
+  .navigation .button {
+    display: block;
+  }
+
+  .navigation .mobile-nav {
+    display: block;
+  }
+
+  .navigation-wrap .overlay {
+    display: block;
+  }
+}

@@ -141,7 +141,7 @@ const Speakers = () => (
     <SpeakersText>更多神秘嘉宾，敬请期待...</SpeakersText>
     <SpeakersDivider />
     <SpeakersText>加入 ECUG，和业界大牛一起解锁 ABC 实践新姿势，更有机会与偶像大咖共进晚餐哦 ！</SpeakersText>
-    <SpeakersButton href="">
+    <SpeakersButton href="https://jinshuju.net/f/iVBzpu" target="_blank">
       报名成为讲师
     </SpeakersButton>
   </SpeakersContainer>

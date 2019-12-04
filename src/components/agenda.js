@@ -17,6 +17,15 @@ const AgendaTitle = styled.h2`
   margin: 0 0 8rem 0;
 `
 
+const AgendaText = styled.div`
+  font-size: 2.2rem;
+  color: #3c64dc;
+  text-align: center;
+  line-height: 6rem;
+  padding: 0 20px;
+  margin-bottom: 0 auto 50px auto
+`
+
 const AgendaGroup = styled.div`
   margin: 0 0 8rem 0;
 `
@@ -174,6 +183,7 @@ const Agenda = () => (
   <AgendaContainer className="section agenda">
     <AgendaTitle>大会议程</AgendaTitle>
     <AgendaList />
+    <AgendaText>活动议程，持续更新中…</AgendaText>
   </AgendaContainer>
 )
 

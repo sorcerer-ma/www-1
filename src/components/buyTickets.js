@@ -27,10 +27,10 @@ const BuyTicketsButton = styled.a`
 const BuyTickets = () => (
   <BuyTicketsContainer className="section buy-ticket">
     <BuyTicketsButton
-      href="http://www.huodongxing.com/event/4465207886100"
+      href="http://www.huodongxing.com/event/1521928757400"
       target="_blank"
     >
-      立即购票，参与 ECUG Con 2018
+      立即购票，参与 ECUG Con 2019
     </BuyTicketsButton>
   </BuyTicketsContainer>
 )

@@ -132,9 +132,7 @@ const Banner = () => (
   <BannerContainer className="section banner">
     <BannerInfo>
       <BannerTitle>
-        ECUG Con 2018
-        <br />
-        拥抱下一个十年
+        ECUG For Future
       </BannerTitle>
       <BannerDivider />
       <BannerSubTitle>自 2007 年，Effective Cloud User Group</BannerSubTitle>
@@ -143,9 +141,9 @@ const Banner = () => (
       </BannerSubP>
     </BannerInfo>
     <BannerReg>
-      <BannerRegTitle>ECUG Con 2018</BannerRegTitle>
-      <BannerRegInfo>12月 22-23 日 深圳</BannerRegInfo>
-      <BuyTicketsButton href="http://www.huodongxing.com/event/4465207886100" target="_blank">
+      <BannerRegTitle>ECUG Con 2019</BannerRegTitle>
+      <BannerRegInfo>1 月 4 ~ 5 日 杭州</BannerRegInfo>
+      <BuyTicketsButton href="http://www.huodongxing.com/event/1521928757400" target="_blank">
         立即购票
       </BuyTicketsButton>
     </BannerReg>

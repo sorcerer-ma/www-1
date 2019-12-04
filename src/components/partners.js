@@ -49,9 +49,9 @@ export const PartnerLogo = styled.img`
 const Partners = () => (
   <PartnersContainer className="section partners">
     <PartnerOrganizer />
-    <PartnerThanks />
+    {/* <PartnerThanks /> */}
     <PartnerPartner />
-    <PartnerMedia />
+    {/* <PartnerMedia /> */}
     <PartnerRegister />
   </PartnersContainer>
 )

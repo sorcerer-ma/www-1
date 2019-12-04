@@ -91,15 +91,15 @@ const Footer = () => (
           名技术从业者参加过 ECUG Con 。
         </FooterDetail>
         <FooterContacts>
-          联&nbsp;&nbsp;系 人：许小姐
+          联&nbsp;&nbsp;系 人：高女士
           <br />
-          联系电话：+ 86 180 1746 8953
+          联系电话：+ 86 150 2668 1370
           <br />
           邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：marketing@qiniu.com
           <br />
-          时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间：2018 年 12 月 22 ~ 23 日
+          时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间：2020 年 1 月 4 ~ 5 日
           <br />
-          会议地址：深圳市 南山区 软件产业基地 5 栋 5 楼
+          会议地址：杭州市上城区 白云路 9 号 - 江南1535
         </FooterContacts>
         <FooterQrcode>
           <FooterQrcodeImg src={qrcode} alt="扫码购票" title="扫码购票" />

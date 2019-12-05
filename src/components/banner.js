@@ -142,7 +142,7 @@ const Banner = () => (
     </BannerInfo>
     <BannerReg>
       <BannerRegTitle>ECUG Con 2019</BannerRegTitle>
-      <BannerRegInfo>1 月 4 ~ 5 日 杭州</BannerRegInfo>
+      <BannerRegInfo>2020 年 1 月 4 ~ 5 日 杭州</BannerRegInfo>
       <BuyTicketsButton href="http://www.huodongxing.com/event/1521928757400" target="_blank">
         立即购票
       </BuyTicketsButton>

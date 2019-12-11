@@ -117,15 +117,16 @@ const ThemesItemP = styled.p`
 `
 
 const data = [
-  { title: '高可用架构', description: '大规模互联网系统的架构设计和实现案例分享' },
-  { title: '人工智能', description: 'AI 技术与应用场景实践，如深度学习、图像识别' },
-  { title: '大数据平台', description: '大数据领域的实战经验分享，如 Hadoop、Spark 等' },
-  { title: '智慧运维', description: 'Devops、AIOps 探索与最佳实践分享' }
+  { title: '高可用架构', description: '大规模互联网系统架构设计、微服务的最佳实践、构建快速应用开发的案例' },
+  { title: '区块链', description: '基于区块链的可信计算' },
+  { title: '大数据平台', description: '大数据领域的实战经验分享，如 Hadoop、数据湖、Spark 3.0 等' },
+  { title: '运维与容器', description: 'SRE技术运营、DevOps、AIOps、K8s应用管理的探索与最佳实践' },
+  { title: '人工智能', description: 'AI 技术与应用场景实践，如IFX的系统架构实现、图像算法的社区应用' }
 ]
 
 const Themes = () => (
   <ThemesContainer className="section themes">
-    <ThemesTitle>ECUG Con 四大技术主题</ThemesTitle>
+    <ThemesTitle>ECUG For Future 五大技术主题</ThemesTitle>
     <ThemesInner className="clearfix">
       {data.map(d => (
         <ThemesItem key={d.title}>

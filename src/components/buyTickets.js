@@ -30,7 +30,7 @@ const BuyTickets = () => (
       href="http://www.huodongxing.com/event/1521928757400"
       target="_blank"
     >
-      立即购票，参与 ECUG Con 2019
+      立即购票，参与 ECUG Con 2020
     </BuyTicketsButton>
   </BuyTicketsContainer>
 )

@@ -141,7 +141,7 @@ const Banner = () => (
       </BannerSubP>
     </BannerInfo>
     <BannerReg>
-      <BannerRegTitle>ECUG Con 2019</BannerRegTitle>
+      <BannerRegTitle>ECUG Con 2020</BannerRegTitle>
       <BannerRegInfo>2020 年 1 月 4 ~ 5 日 杭州</BannerRegInfo>
       <BuyTicketsButton href="http://www.huodongxing.com/event/1521928757400" target="_blank">
         立即购票

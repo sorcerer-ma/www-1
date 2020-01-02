@@ -1,21 +1,11 @@
-import React from 'react'
-import {
-  Player,
-  BigPlayButton,
-  ControlBar,
-  PlayToggle,
-  VolumeMenuButton,
-  FullscreenToggle
-} from 'video-react'
-import HLSSource from './hlsSource'
+import React, { Component } from 'react'
+import videojs from 'video.js'
 
 import styled from 'styled-components'
-
-import "../../node_modules/video-react/dist/video-react.css";
+import 'video.js/dist/video-js.min.css'
 
 const LiveContent = styled.div`
   background-color: #000;
-  margin-top: -20px;
 `
 
 const VideoWrapper = styled.div`
@@ -28,29 +18,58 @@ const VideoWrapper = styled.div`
   }
 `
 
+class VideoPlayer extends Component {
+  componentDidMount() {
+    // instantiate Video.js
+    this.player = videojs(this.videoNode, this.props, function onPlayerReady() {
+      console.log('onPlayerReady', this)
+    });
+  }
+
+  // destroy player on unmount
+  componentWillUnmount() {
+    if (this.player) {
+      this.player.dispose()
+    }
+  }
+
+  // wrap the player in a div with a `data-vjs-player` attribute
+  // so videojs won't create additional wrapper in the DOM
+  // see https://github.com/videojs/video.js/pull/3856
+  render() {
+    return (
+      <div>
+        <div data-vjs-player>
+          <video
+            ref={node => this.videoNode = node}
+            className="video-js vjs-big-play-centered"
+          ></video>
+        </div>
+      </div>
+    )
+  }
+}
+
 export default class Live extends React.Component {
   constructor(props) {
     super(props)
   }
 
   render() {
+    const videoJsOptions = {
+      autoplay: true,
+      controls: true,
+      fluid: true,
+      sources: [{
+        src: 'https://pili-live-hls.qshare.support2technical.me/qshare/ecug2020.m3u8',
+        type: 'application/x-mpegURL'
+      }]
+    }
+
     return (
       <LiveContent>
         <VideoWrapper>
-          <Player playsInline>
-            <BigPlayButton position="center" />
-            <HLSSource
-              isVideoChild
-              src="https://pili-live-hls.qshare.support2technical.me/qshare/test123.m3u8"
-            />
-            <ControlBar
-              autoHide={true}
-              disableDefaultControls={true}>
-              <PlayToggle></PlayToggle>
-              <VolumeMenuButton></VolumeMenuButton>
-              <FullscreenToggle></FullscreenToggle>
-            </ControlBar>
-          </Player>
+          <VideoPlayer {...videoJsOptions} />
         </VideoWrapper>
       </LiveContent>
     )

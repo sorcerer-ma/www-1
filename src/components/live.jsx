@@ -41,7 +41,7 @@ export default class Live extends React.Component {
             <BigPlayButton position="center" />
             <HLSSource
               isVideoChild
-              src="http://pili-live-hls.qshare.qiniucdn.com/qshare/test123.m3u8"
+              src="https://pili-live-hls.qshare.support2technical.me/qshare/test123.m3u8"
             />
             <ControlBar
               autoHide={true}

@@ -20,6 +20,7 @@ class Navigation extends React.Component {
       { name: '大会议程', location: '#agenda' },
       { name: '历届回顾', location: '#previous' },
       { name: '合作伙伴', location: '#partners' },
+      { name: '会场直播', location: '/live' },
     ]
 
     let { showNav } = this.state

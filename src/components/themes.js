@@ -70,8 +70,8 @@ const Themes = () => (
       </ThemesTitle>
 
       <ThemesInner className="clearfix">
-        {data.map(d => (
-          <ThemesItem key={d.title}>
+        {data.map((d, i) => (
+          <ThemesItem key={i}>
             <ThemesItemIcon
               src={d.icon}
               title={d.title}

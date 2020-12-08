@@ -23,7 +23,9 @@ const AgendaTitle = styled.h2`
 const AgendaGroupWrapper = styled.div`
   margin: 8rem 0;
   border: .2rem solid #2C59D8;
+`
 
+const AgendaGroup = styled.div`
   @media only screen and (max-width: 1279px) {
     display: -webkit-flex; /* Safari */
     display: flex;
@@ -146,8 +148,8 @@ const AgendaList = () => (
           const showDivider = ((gi + 1) % 2 === 0) && (gi + 1) < data.allPrismicAgenda.group.length
 
           return (
-            <>
-              <AgendaGroupTitle key={gi}>
+            <AgendaGroup key={gi}>
+              <AgendaGroupTitle>
                 {group.edges[0].node.data.time}
               </AgendaGroupTitle>
 
@@ -194,7 +196,7 @@ const AgendaList = () => (
               })}
 
               {showDivider ? <AgendaGroupDivider /> : null}
-            </>
+            </AgendaGroup>
           )
         })}
       </AgendaGroupWrapper>

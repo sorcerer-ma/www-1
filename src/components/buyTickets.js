@@ -2,35 +2,36 @@ import React from 'react'
 import styled from 'styled-components'
 
 const BuyTicketsContainer = styled.div`
+  padding: 8rem 0;
+  border: .2rem solid #40485C;
+  border-right: none;
+  border-left: none;
   text-align: center;
-  padding: 7rem 0;
-  background-color: #d7f9ff;
 `
 
 const BuyTicketsButton = styled.a`
-  display: inline-block;
-  line-height: 6rem;
-  color: #fff;
-  font-size: 2.6rem;
+  padding: 1rem 3rem;
+  color: #2C5AD8;
+  border-radius: .4rem;
+  background-color: #FFF;
+  font-size: 2.4rem;
   text-decoration: none;
-  background-color: #540cfa;
-  box-shadow: 0 2px 4px 0 rgba(60, 9, 179, 0.3);
-  border-radius: 9px;
-  padding: 0 42px;
+  box-shadow: .6rem .6rem .8rem 0 rgba(43, 89, 216, .3);
+  transition: all .3s;
 
-  @media (max-width: 1279px) {
-    font-size: 2rem;
-    padding: 0 20px;
+  &:hover {
+    color: #FFF;
+    background-color: #2C5AD8;
   }
 `
 
 const BuyTickets = () => (
   <BuyTicketsContainer className="section buy-ticket">
     <BuyTicketsButton
-      href="http://www.huodongxing.com/event/1521928757400"
+      href="TODO"
       target="_blank"
     >
-      立即购票，参与 ECUG Con 2020
+      点击购买 - 早鸟票
     </BuyTicketsButton>
   </BuyTicketsContainer>
 )

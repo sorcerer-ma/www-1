@@ -1,55 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import { StaticQuery, graphql, Link } from 'gatsby'
 
+import TitleDivider from './titleDivider'
+import ComponentDivider from './componentDivider'
+
 const SpeakersContainer = styled.div`
+  padding: 6rem 0;
   text-align: center;
-  padding: 10rem 0 4rem 0;
 `
 
 const SpeakersTitle = styled.h2`
-  font-size: 2.6rem;
-  color: #540cfa;
+  margin-bottom: 0;
+  font-size: 4rem;
+  color: #FFF;
   text-align: center;
   line-height: 6rem;
-  margin: 0 0 8rem 0;
-`
-
-const SpeakersDivider = styled.div`
-  background-color: #540cfa;
-  height: 4px;
-  width: 384px;
-  margin: 0 auto 5rem auto;
-
-  @media (max-width: 383px) {
-    width: 90%;
-  }
-`
-
-const SpeakersText = styled.p`
-  font-size: 2.2rem;
-  color: #3c64dc;
-  text-align: center;
-  line-height: 6rem;
-  padding: 0 20px;
-  margin-bottom: 0 auto 50px auto;
-`
-
-const SpeakersButton = styled.a`
-  display: inline-block;
-  background: #540cfa;
-  box-shadow: 0 2px 4px 0 rgba(60, 9, 179, 0.3);
-  border-radius: 9px;
-  font-size: 2.2rem;
-  color: #ffffff;
-  text-align: center;
-  line-height: 6rem;
-  padding: 0 10rem;
-  margin: 0 auto;
-  text-decoration: none;
 `
 
 const SpeakersListWrapper = styled.div`
+  margin-top: 6rem;
   display: -webkit-flex; /* Safari */
   display: flex;
   flex-wrap: wrap;
@@ -57,36 +28,31 @@ const SpeakersListWrapper = styled.div`
 `
 
 const SpeakersItem = styled.div`
-  width: 220px;
-  margin: 0 6rem 8rem 6rem;
-
-  @media (max-width: 480px) {
-    width: 90px;
-    margin: 0 1rem 4rem 1rem;
-  }
+  width: 26rem;
+  margin: 0 8rem 4rem;
 `
 
 const SpeakerPhoto = styled.img`
-  border-radius: 50%;
-
   width: 100%;
   height: auto;
+  border: .4rem solid #2C59D8;
+  box-shadow: -1rem 1rem 1rem 0 rgba(0, 0, 0, 1);
 `
 
 const SpeakerName = styled.h4`
-  font-size: 2.2rem;
-  color: #005cc7;
+  margin: 3rem 0 1rem;
+  color: #FFF;
+  font-size: 2.4rem;
   text-align: center;
-  line-height: 3.2rem;
-  margin: 3rem 0 1.6rem 0;
+  line-height: 3rem;
 `
 
 const SpeakerInfo = styled.p`
-  font-size: 1.5rem;
-  color: #272727;
-  text-align: center;
-  line-height: 3rem;
   margin: 0;
+  color: #2C59D8;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 3.2rem;
 `
 
 const SpeakersList = () => (
@@ -135,16 +101,18 @@ const SpeakersList = () => (
 )
 
 const Speakers = () => (
-  <SpeakersContainer className="section speakers">
-    <SpeakersTitle>大会嘉宾</SpeakersTitle>
-    <SpeakersList />
-    <SpeakersText>更多神秘嘉宾，敬请期待...</SpeakersText>
-    <SpeakersDivider />
-    <SpeakersText>加入 ECUG，和业界大牛一起解锁 ABC 实践新姿势，更有机会与偶像大咖共进晚餐哦 ！</SpeakersText>
-    <SpeakersButton href="https://jinshuju.net/f/iVBzpu" target="_blank">
-      报名成为讲师
-    </SpeakersButton>
-  </SpeakersContainer>
+  <>
+    <SpeakersContainer className="section speakers">
+      <SpeakersTitle>
+        大会嘉宾
+        <TitleDivider />
+      </SpeakersTitle>
+
+      <SpeakersList />
+    </SpeakersContainer>
+
+    <ComponentDivider />
+  </>
 )
 
 export default Speakers

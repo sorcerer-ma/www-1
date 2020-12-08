@@ -1,6 +1,8 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+
 import { StaticQuery, graphql } from 'gatsby'
 
 import Navigation from '../components/navigation'
@@ -11,6 +13,10 @@ import favicon from '../images/favicon.png'
 import '../styles/reset.css'
 import '../styles/utils.css'
 import './layout.css'
+
+const LayoutContainer = styled.div`
+  background-color: #010D24;
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -26,7 +32,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <LayoutContainer>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -61,7 +67,7 @@ const Layout = ({ children }) => (
         <BuyTickets />
         {/* 页脚 */}
         <Footer />
-      </>
+      </LayoutContainer>
     )}
   />
 )

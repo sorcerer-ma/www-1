@@ -51,6 +51,7 @@ class VideoPlayer extends Component {
 }
 
 export default class Live extends React.Component {
+  // eslint-disable-next-line
   constructor(props) {
     super(props)
   }

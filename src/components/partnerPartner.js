@@ -3,6 +3,9 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import { PartnersTitle, PartnersListWrapper, PartnersItem, PartnerLogo } from './partners'
 
+import TitleDivider from './titleDivider'
+import ComponentDivider from './componentDivider'
+
 const PartnerPartner = () => (
   <StaticQuery
     query={graphql`
@@ -24,10 +27,15 @@ const PartnerPartner = () => (
     `}
     render={data => (
       <React.Fragment>
-        <PartnersTitle>合作伙伴</PartnersTitle>
+        <PartnersTitle>
+          合作伙伴
+          <TitleDivider />
+        </PartnersTitle>
+
         <PartnersListWrapper>
           {data.allPrismicPartner.edges.map(p => {
             let { id, name, logo } = p.node.data
+
             return (
               <PartnersItem key={`partner-${id}`}>
                 <PartnerLogo src={logo.url} alt={name} title={name} />
@@ -35,6 +43,8 @@ const PartnerPartner = () => (
             )
           })}
         </PartnersListWrapper>
+
+        <ComponentDivider />
       </React.Fragment>
     )}
   />

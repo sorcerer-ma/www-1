@@ -4,24 +4,28 @@ import styled from 'styled-components'
 import previousWeb from '../images/prevw.png'
 import previousMobile from '../images/prevm.png'
 
+import TitleDivider from './titleDivider'
+import ComponentDivider from './componentDivider'
+
 const PreviousContainer = styled.div`
-  padding: 10rem 0;
-  background-image: linear-gradient(45deg, #1833af 0%, #723cc1 100%);
+  padding: 6rem 0;
   text-align: center;
 `
 
-const PreviousTitle = styled.h4`
-  font-size: 2.6rem;
-  color: #fff;
+const PreviousTitle = styled.h2`
+  margin-bottom: 0;
+  font-size: 4rem;
+  color: #FFF;
   text-align: center;
   line-height: 6rem;
-  margin: 0 0 4rem 0;
 `
 
 const PreviousInner = styled.div`
-  width: 95%;
-  max-width: 1080px;
+  width: 90%;
   margin: 0 auto;
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  max-width: 1080px;
 `
 
 const PreviousImg = styled.img`
@@ -53,17 +57,26 @@ class Previous extends React.Component {
 
   render() {
     let { windowWidth } = this.state
+
     return (
-      <PreviousContainer className="section previous">
-        <PreviousTitle>ECUG 历届回顾</PreviousTitle>
-        <PreviousInner>
-          {windowWidth > 1080 ? (
-            <PreviousImg src={previousWeb} alt="历届回顾" title="历届回顾" />
-          ) : (
-            <PreviousImg src={previousMobile} alt="历届回顾" title="历届回顾" />
-          )}
-        </PreviousInner>
-      </PreviousContainer>
+      <>
+        <PreviousContainer className="section previous">
+          <PreviousTitle>
+            历届回顾
+            <TitleDivider />
+          </PreviousTitle>
+
+          <PreviousInner>
+            {windowWidth > 1080 ? (
+              <PreviousImg src={previousWeb} alt="历届回顾" title="历届回顾" />
+            ) : (
+              <PreviousImg src={previousMobile} alt="历届回顾" title="历届回顾" />
+            )}
+          </PreviousInner>
+        </PreviousContainer>
+
+        <ComponentDivider />
+      </>
     )
   }
 }

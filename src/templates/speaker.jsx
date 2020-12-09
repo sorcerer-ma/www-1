@@ -5,78 +5,90 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 
 const SpeakerContainer = styled.div`
-  width: 90%;
-  max-width: 1200px;
-  margin: 20rem auto;
+  padding: 10rem;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  @media only screen and (max-width: 767px) {
+    padding: 10rem 6rem;
+    flex-direction: column;
+  }
 `
 
 const SpeakerPhoto = styled.img`
-  width: 220px;
-  height: 220px;
-  float: left;
-  margin: 0 80px 0 0;
-  border-radius: 50%;
+  width: 22rem;
+  height: auto;
+  margin: 0 8rem 0 0;
+  border: .4rem solid #2C59D8;
+  box-shadow: -1rem 1rem 0 .2rem rgba(0, 0, 0, 1);
+  flex: 0 0 auto;
 
-  @media (max-width: 799px) {
-    width: 110px;
-    height: 110px;
-    margin: 0 40px 0 0;
+  @media only screen and (max-width: 767px) {
+    margin: 0 auto;
   }
 `
 
 const SpeakerInfo = styled.div`
-  float: left;
+  flex: 1 1 auto;
+
+  @media only screen and (max-width: 767px) {
+    margin-top: 4rem;
+  }
 `
 
-const SpeakerName = styled.h4`
+const SpeakerName = styled.h2`
+  margin: 0 0 1.6rem 0;
   font-size: 2.2rem;
-  color: #005cc7;
+  color: #FFF;
   line-height: 3.2rem;
-  margin: 3.6rem 0 1.6rem 0;
-
-  @media (max-width: 799px) {
-    margin-top: 0;
-  }
-
-  @media (max-width: 480px) {
-    margin-top: 15px;
-  }
 `
 
 const SpeakerTitle = styled.p`
+  margin: 0 0 .8rem 0;
+  color: #2C59D8;
   font-size: 2.2rem;
-  color: #272727;
   line-height: 1.5;
-  margin: 0 0 0.8rem 0;
 `
 
 const SpeakerDescription = styled.p`
+  margin-top: .8rem;
+  color: #FFF;
   font-size: 2.2rem;
-  color: #000000;
   line-height: 4.8rem;
-  margin: 8px 0 0 300px;
-
-  @media (max-width: 799px) {
-    margin: 6rem 0 0 0;
-  }
 `
 
 const Speaker = ({ data: { prismicSpeaker } }) => {
   const { data } = prismicSpeaker
   const { name, company, title, description, photo } = data
+
   return (
     <Layout>
       <SpeakerContainer>
-        <div className="clearfix">
-          <SpeakerPhoto src={photo.url} alt={name} title={name} />
-          <SpeakerInfo>
-            <SpeakerName>{name}</SpeakerName>
-            <SpeakerTitle>{company.text}</SpeakerTitle>
-            <SpeakerTitle>{title.text}</SpeakerTitle>
-          </SpeakerInfo>
-        </div>
+        <SpeakerPhoto
+          src={photo.url}
+          alt={name}
+          title={name}
+        />
 
-        <SpeakerDescription>{description.text}</SpeakerDescription>
+        <SpeakerInfo>
+          <SpeakerName>
+            {name}
+          </SpeakerName>
+
+          <SpeakerTitle>
+            {company.text}
+          </SpeakerTitle>
+
+          <SpeakerTitle>
+            {title.text}
+          </SpeakerTitle>
+
+          <SpeakerDescription>
+            {description.text}
+          </SpeakerDescription>
+        </SpeakerInfo>
       </SpeakerContainer>
     </Layout>
   )

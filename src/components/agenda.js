@@ -1,121 +1,120 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import { StaticQuery, graphql } from 'gatsby'
 
+import TitleDivider from './titleDivider'
+import ComponentDivider from './componentDivider'
+
 const AgendaContainer = styled.div`
-  padding: 10rem 0;
-  width: 90%;
-  max-width: 1080px;
+  padding: 6rem 0;
+  width: 80%;
   margin: 0 auto;
 `
 
 const AgendaTitle = styled.h2`
-  font-size: 2.6rem;
-  color: #540cfa;
+  margin-bottom: 0;
+  font-size: 4rem;
+  color: #FFF;
   text-align: center;
   line-height: 6rem;
-  margin: 0 0 8rem 0;
 `
 
-const AgendaText = styled.div`
-  font-size: 2.2rem;
-  color: #3c64dc;
-  text-align: center;
-  line-height: 6rem;
-  padding: 0 20px;
-  margin-bottom: 0 auto 50px auto
+const AgendaGroupWrapper = styled.div`
+  margin: 6rem 0 4rem;
+  border: .2rem solid #2C59D8;
 `
 
 const AgendaGroup = styled.div`
-  margin: 0 0 8rem 0;
+  @media only screen and (max-width: 1279px) {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
 `
 
-const AgendaTimeTitle = styled.h4`
-  font-size: 2.6rem;
-  color: #540cfa;
-  text-align: center;
-  line-height: 5rem;
-  font-weight: 500;
-  margin: 0 0 4rem 0;
-`
-
-const AgendaLectrueItem = styled.div`
+const AgendaGroupTitle = styled.div`
   position: relative;
-  padding: 0 0 0 6rem;
-  margin: 0 0 4rem 0;
+  margin: 3rem 6rem;
+  color: #2C59D8;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
 
-  @media (max-width: 480px) {
-    padding: 0;
+  &:before {
+    content: " ";
+    width: 1em;
+    height: .2rem;
+    position: absolute;
+    top: 100%;
+    background-color: #2C59D8;
+  }
+
+  @media only screen and (max-width: 1279px) {
+    width: calc(100% - 12rem);
+    flex: 0 1 auto;
   }
 `
 
-const LectrueSpeakerImg = styled.img`
-  width: 12rem;
-  height: 12rem;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
+const AgendaGroupItem = styled.div`
+  margin: 3rem 6rem;
+  color: #FFF;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
 
-  @media (max-width: 480px) {
-    display: none;
+  @media only screen and (max-width: 1279px) {
+    width: calc(50% - 12rem);
+    margin-top: 0;
+    flex: 0 1 auto;
+    flex-direction: column;
+
+    & > div {
+      width: auto;
+      margin-left: 0;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: auto;
   }
 `
 
-const LectrueTitleWrap = styled.div`
-  background-color: #540cfa;
-  padding: 1rem 2rem 1rem 8rem;
-
-  @media (max-width: 480px) {
-    padding: 1rem 2rem;
-  }
+const AgendaItemTime = styled.div`
+  width: 14rem;
+  flex: 0 0 auto;
 `
 
-const LectrueSpeaker = styled.span`
-  margin: 0;
-  color: #fff;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 4rem;
+const AgendaItemSpeakTitle = styled.div`
+  width: 40rem;
+  margin-left: 2rem;
+  flex: 0 0 auto;
 `
 
-const LectrueSpeakerTitle = styled.span`
-  margin: 0 0 0 1rem;
-  color: #fff;
-  font-size: 2rem;
-  line-height: 4rem;
+const AgendaItemSpeakerName = styled.div`
+  width: 10rem;
+  margin-left: 2rem;
+  flex: 0 0 auto;
 `
 
-const LectrueSubtitleWrap = styled.div`
-  background-color: #eee7ff;
-  padding: 1rem 2rem 1rem 8rem;
-  color: #000;
-  font-size: 2rem;
-  line-height: 4rem;
-
-  @media (max-width: 480px) {
-    padding: 1rem 2rem;
-  }
+const AgendaItemSpeakerDesc = styled.div`
+  margin-left: 2rem;
+  flex: 1 1 auto;
 `
 
-const AgendaWorkshopItem = styled.div`
-  margin: 0 0 4rem 0;
+const AgendaItemWorkshopDesc = styled.div`
+  margin-left: 2rem;
+  flex: 1 1 auto;
 `
 
-const WorkshopTitleWrap = styled.div`
-  background-color: #540cfa;
-  padding: 1rem 2rem;
-  color: #fff;
-  font-size: 2rem;
-  line-height: 4rem;
-`
-
-const WorkshopSubtitleWrap = styled.div`
-  background-color: #eee7ff;
-  padding: 1rem 2rem;
-  color: #000;
-  font-size: 2rem;
-  line-height: 4rem;
+const AgendaGroupDivider = styled.div`
+  width: 100%;
+  height: .2rem;
+  background-color: #2C59D8;
 `
 
 const AgendaList = () => (
@@ -129,12 +128,10 @@ const AgendaList = () => (
                 data {
                   type
                   time
+                  duration
                   title
                   speaker_name
                   speaker_desc
-                  speaker_photo {
-                    url
-                  }
                   workshop_desc
                 }
               }
@@ -144,47 +141,80 @@ const AgendaList = () => (
       }
     `}
     render={data => (
-      <div>
-        {data.allPrismicAgenda.group.map((group, gi) => (
-          <AgendaGroup className="agenda-group" key={`agenda-group-${gi}`}>
-            <AgendaTimeTitle>{group.edges[0].node.data.time}</AgendaTimeTitle>
-            {group.edges.map((agd, ai) => {
-              let { type, title, speaker_name, speaker_desc, speaker_photo, workshop_desc } = agd.node.data
-              let res
-              if (type === 'lecture') {
-                res = (
-                  <AgendaLectrueItem key={`agenda-iterm-${gi}-${ai}`}>
-                    <LectrueTitleWrap>
-                      <LectrueSpeakerImg src={speaker_photo.url} alt={speaker_name} title={speaker_name} />
-                      <LectrueSpeaker>{speaker_name}</LectrueSpeaker>
-                      <LectrueSpeakerTitle>{speaker_desc}</LectrueSpeakerTitle>
-                    </LectrueTitleWrap>
-                    <LectrueSubtitleWrap>{title}</LectrueSubtitleWrap>
-                  </AgendaLectrueItem>
-                )
-              } else if (type === 'workshop') {
-                res = (
-                  <AgendaWorkshopItem key={`agenda-iterm-${gi}-${ai}`}>
-                    <WorkshopTitleWrap>{title}</WorkshopTitleWrap>
-                    {workshop_desc && <WorkshopSubtitleWrap>{workshop_desc}</WorkshopSubtitleWrap>}
-                  </AgendaWorkshopItem>
-                )
-              }
-              return res
-            })}
-          </AgendaGroup>
-        ))}
-      </div>
+      <AgendaGroupWrapper>
+        {data.allPrismicAgenda.group.map((group, gi) => {
+          const showDivider = ((gi + 1) % 2 === 0) && (gi + 1) < data.allPrismicAgenda.group.length
+
+          return (
+            <AgendaGroup key={gi}>
+              <AgendaGroupTitle>
+                {group.edges[0].node.data.time}
+              </AgendaGroupTitle>
+
+              {group.edges.map((agd, ai) => {
+                const { type, duration, title, speaker_name, speaker_desc, workshop_desc } = agd.node.data
+
+                if (type === 'lecture') {
+                  return (
+                    <AgendaGroupItem key={ai}>
+                      <AgendaItemTime>
+                        {duration}
+                      </AgendaItemTime>
+
+                      <AgendaItemSpeakTitle>
+                        {title}
+                      </AgendaItemSpeakTitle>
+
+                      <AgendaItemSpeakerName>
+                        {speaker_name}
+                      </AgendaItemSpeakerName>
+
+                      <AgendaItemSpeakerDesc>
+                        {speaker_desc}
+                      </AgendaItemSpeakerDesc>
+                    </AgendaGroupItem>
+                  )
+                }
+
+                if (type === 'workshop') {
+                  return (
+                    <AgendaGroupItem key={ai}>
+                      <AgendaItemTime>
+                        {duration}
+                      </AgendaItemTime>
+
+                      <AgendaItemWorkshopDesc>
+                        {workshop_desc}
+                      </AgendaItemWorkshopDesc>
+                    </AgendaGroupItem>
+                  )
+                }
+
+                return null
+              })}
+
+              {showDivider ? <AgendaGroupDivider /> : null}
+            </AgendaGroup>
+          )
+        })}
+      </AgendaGroupWrapper>
     )}
   />
 )
 
 const Agenda = () => (
-  <AgendaContainer className="section agenda">
-    <AgendaTitle>大会议程</AgendaTitle>
-    <AgendaList />
-    <AgendaText>活动议程，持续更新中…</AgendaText>
-  </AgendaContainer>
+  <>
+    <AgendaContainer className="section agenda">
+      <AgendaTitle>
+        大会议程
+        <TitleDivider />
+      </AgendaTitle>
+
+      <AgendaList />
+    </AgendaContainer>
+
+    <ComponentDivider />
+  </>
 )
 
 export default Agenda

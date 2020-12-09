@@ -21,7 +21,7 @@ const AgendaTitle = styled.h2`
 `
 
 const AgendaGroupWrapper = styled.div`
-  margin: 8rem 0;
+  margin: 6rem 0 4rem;
   border: .2rem solid #2C59D8;
 `
 

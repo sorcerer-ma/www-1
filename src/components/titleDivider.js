@@ -5,7 +5,7 @@ const MainWrapper = styled.div`
   width: 8rem;
   height: .4rem;
   margin: 0 auto;
-  margin-top: 0.6rem;
+  margin-top: .6rem;
   background-color: #2C59D8;
 `
 

@@ -18,6 +18,13 @@ const BuyTicketsButton = styled.a`
   text-decoration: none;
   box-shadow: .6rem .6rem .8rem 0 rgba(43, 89, 216, .3);
   transition: all .3s;
+  outline: none;
+
+  &:active,
+  &:focus {
+    color: #2C5AD8;
+    background-color: #FFF;
+  }
 
   &:hover {
     color: #FFF;
@@ -28,8 +35,9 @@ const BuyTicketsButton = styled.a`
 const BuyTickets = () => (
   <BuyTicketsContainer className="section buy-ticket">
     <BuyTicketsButton
-      href="TODO"
+      href=""
       target="_blank"
+      rel="noreferrer noopener"
     >
       点击购买 - 早鸟票
     </BuyTicketsButton>

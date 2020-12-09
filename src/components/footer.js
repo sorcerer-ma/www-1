@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import qrcode from '../images/qrcode.png'
+import qrcode from '../images/qrcode.jpg'
 
 const FooterContainer = styled.div`
   padding: 8rem 0;
@@ -57,11 +57,15 @@ const Footer = () => (
         <br />
         时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间：2021 年 1 月 16 日 ~ 17 日
         <br />
-        会议地址：xxx
+        会议地址：杭州市上城区 白云路 9 号 - 江南 1535
       </FooterContacts>
 
       <FooterQrcode>
-        <FooterQrcodeImg src={qrcode} alt="扫码购票" title="扫码购票" />
+        <FooterQrcodeImg
+          src={qrcode}
+          alt="关注我们"
+          title="关注我们"
+        />
         <br />
         关注我们
       </FooterQrcode>

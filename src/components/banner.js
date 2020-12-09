@@ -11,20 +11,20 @@ const BannerContainer = styled.div`
   align-items: center;
 `
 
-const BannerTitleImage = styled.img`
-  width: 768px;
-  margin-top: 6rem;
-  min-height: 20rem;
-  background-color: #DDD;
+// const BannerTitleImage = styled.img`
+//   width: 768px;
+//   margin-top: 6rem;
+//   min-height: 20rem;
+//   background-color: #DDD;
 
-  @media only screen and (max-width: 767px) {
-    width: 80%;
-  }
-`
+//   @media only screen and (max-width: 767px) {
+//     width: 80%;
+//   }
+// `
 
 const BannerBtnWrapper = styled.div`
   width: 80%;
-  margin-top: 6rem;
+  margin-top: 10rem;
   text-align: center;
   display: -webkit-flex; /* Safari */
   display: flex;
@@ -57,7 +57,14 @@ const BannerBuyBtn = styled.a`
   text-decoration: none;
   box-shadow: .6rem .6rem .8rem 0 rgba(43, 89, 216, .3);
   transition: all .3s;
+  outline: none;
   flex: 0 1 auto;
+
+  &:active,
+  &:focus {
+    color: #2C5AD8;
+    background-color: #FFF;
+  }
 
   &:hover {
     color: #FFF;
@@ -93,7 +100,7 @@ const BannerInfo = styled.div`
   }
 `
 
-const BannerInfoTitle = styled.h1`
+const BannerInfoTitle = styled.h2`
   margin: 0;
   margin-bottom: 2rem;
   color: #FFF;
@@ -114,7 +121,7 @@ const BannerInfoDesc = styled.div`
 
 const Banner = () => (
   <BannerContainer className="section banner">
-    <BannerTitleImage />
+    {/* <BannerTitleImage /> */}
 
     <BannerBtnWrapper>
       <BannerBtnDesc>
@@ -123,8 +130,9 @@ const Banner = () => (
       </BannerBtnDesc>
 
       <BannerBuyBtn
-        href="TODO"
+        href=""
         target="_blank"
+        rel="noreferrer noopener"
       >
         立即参会
       </BannerBuyBtn>
@@ -145,7 +153,7 @@ const Banner = () => (
           ECUG Con
         </BannerInfoTitle>
         <BannerInfoDesc>
-          <p>由 ECUG 社区主办的一年一度技术盛辉，参会的社区成员覆盖 Google、微软、BAT、华为、京东、携程等知名企业技术高层以及七牛云、饿了么、PingCAP、Kylingence 等创业公司创始人。自 2007 年开始举办以来，已经有逾 4000 名技术从业者参加过 ECUG Con</p>
+          <p>由 ECUG 社区主办的一年一度技术盛会，参会的社区成员涵盖 Google、微软、BAT、华为、京东、携程等知名企业技术高层以及七牛云、饿了么、PingCAP、Kylingence 等创业公司创始人。自 2007 年开始举办以来，已经有逾 4000 名技术从业者参加过 ECUG Con</p>
         </BannerInfoDesc>
       </div>
     </BannerInfo>

@@ -2,24 +2,36 @@ import React from 'react'
 
 import { PartnersTitle, PartnersListWrapper, PartnersItem, PartnerLogo } from './partners'
 
-import logo from '../images/hdx.png'
+import IconRubyChina from '../images/ruby-china.jpg'
 
 import TitleDivider from './titleDivider'
 
 const PartnerSupporter = () => (
   <React.Fragment>
-    <PartnersTitle>
+    <PartnersTitle
+      style={{
+        paddingTop: '6rem'
+      }}
+    >
       社区支持
       <TitleDivider />
     </PartnersTitle>
 
     <PartnersListWrapper>
       <PartnersItem>
-        <PartnerLogo src={logo} alt="活动行" title="活动行" />
+        <PartnerLogo
+          src={IconRubyChina}
+          alt="Ruby China"
+          title="Ruby China"
+        />
       </PartnersItem>
 
       <PartnersItem>
-        <PartnerLogo src={logo} alt="活动行" title="活动行" />
+        <PartnerLogo
+          src={IconRubyChina}
+          alt="Ruby China"
+          title="Ruby China"
+        />
       </PartnersItem>
     </PartnersListWrapper>
   </React.Fragment>

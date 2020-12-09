@@ -12,7 +12,7 @@ const PreviousContainer = styled.div`
   text-align: center;
 `
 
-const PreviousTitle = styled.h4`
+const PreviousTitle = styled.h2`
   margin-bottom: 0;
   font-size: 4rem;
   color: #FFF;
@@ -21,10 +21,10 @@ const PreviousTitle = styled.h4`
 `
 
 const PreviousInner = styled.div`
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   max-width: 1080px;
 `
 

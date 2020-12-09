@@ -13,7 +13,7 @@ const ThemesContainer = styled.div`
   text-align: center;
 `
 
-const ThemesTitle = styled.h4`
+const ThemesTitle = styled.h2`
   margin-bottom: 0;
   font-size: 4rem;
   color: #FFF;
@@ -22,7 +22,7 @@ const ThemesTitle = styled.h4`
 `
 
 const ThemesInner = styled.div`
-  margin: 6rem 0;
+  margin: 6rem 0 4rem;
   display: -webkit-flex; /* Safari */
   display: flex;
   justify-content: center;
@@ -45,9 +45,13 @@ const ThemesItem = styled.div`
 
 const ThemesItemIcon = styled.img`
   width: 160px;
+
+  @media only screen and (max-width: 900px) {
+    width: 120px;
+  }
 `
 
-const ThemesItemTitle = styled.h4`
+const ThemesItemTitle = styled.h2`
   margin: 0;
   margin-top: 1.2rem;
   color: #FFF;

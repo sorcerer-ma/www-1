@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 
 const SpeakerContainer = styled.div`
-  margin-top: -20px;
   padding: 10rem;
   display: -webkit-flex; /* Safari */
   display: flex;
@@ -13,15 +12,17 @@ const SpeakerContainer = styled.div`
   align-items: flex-start;
 
   @media only screen and (max-width: 767px) {
+    padding: 10rem 6rem;
     flex-direction: column;
   }
 `
 
 const SpeakerPhoto = styled.img`
   width: 22rem;
-  height: 22rem;
+  height: auto;
   margin: 0 8rem 0 0;
-  border-radius: 50%;
+  border: .4rem solid #2C59D8;
+  box-shadow: -1rem 1rem 0 .2rem rgba(0, 0, 0, 1);
   flex: 0 0 auto;
 
   @media only screen and (max-width: 767px) {
@@ -37,7 +38,7 @@ const SpeakerInfo = styled.div`
   }
 `
 
-const SpeakerName = styled.h4`
+const SpeakerName = styled.h2`
   margin: 0 0 1.6rem 0;
   font-size: 2.2rem;
   color: #FFF;
@@ -45,7 +46,7 @@ const SpeakerName = styled.h4`
 `
 
 const SpeakerTitle = styled.p`
-  margin: 0 0 0.8rem 0;
+  margin: 0 0 .8rem 0;
   color: #2C59D8;
   font-size: 2.2rem;
   line-height: 1.5;

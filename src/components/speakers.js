@@ -20,7 +20,7 @@ const SpeakersTitle = styled.h2`
 `
 
 const SpeakersListWrapper = styled.div`
-  margin-top: 6rem;
+  margin: 6rem 0 4rem;
   display: -webkit-flex; /* Safari */
   display: flex;
   flex-wrap: wrap;
@@ -36,10 +36,10 @@ const SpeakerPhoto = styled.img`
   width: 100%;
   height: auto;
   border: .4rem solid #2C59D8;
-  box-shadow: -1rem 1rem 1rem 0 rgba(0, 0, 0, 1);
+  box-shadow: -1rem 1rem 0 .2rem rgba(0, 0, 0, 1);
 `
 
-const SpeakerName = styled.h4`
+const SpeakerName = styled.h2`
   margin: 3rem 0 1rem;
   color: #FFF;
   font-size: 2.4rem;
@@ -104,7 +104,7 @@ const Speakers = () => (
   <>
     <SpeakersContainer className="section speakers">
       <SpeakersTitle>
-        大会嘉宾
+        演讲嘉宾
         <TitleDivider />
       </SpeakersTitle>
 

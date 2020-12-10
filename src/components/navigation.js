@@ -16,11 +16,11 @@ class Navigation extends React.Component {
   render() {
     let navs = [
       { name: '首页', location: '/' },
+      { name: '技术主题', location: '#themes' },
       { name: '演讲嘉宾', location: '#speakers' },
       { name: '大会议程', location: '#agenda' },
-      { name: '历届回顾', location: '#previous' },
       { name: '合作伙伴', location: '#partners' },
-      { name: '会场直播', location: '/live' },
+      { name: '报名参会', location: '#join' },
     ]
 
     let { showNav } = this.state

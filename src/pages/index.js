@@ -6,23 +6,25 @@ import Speakers from '../components/speakers'
 import Agenda from '../components/agenda'
 import Themes from '../components/themes'
 import Partners from '../components/partners'
-import Previous from '../components/previous'
+import Join from '../components/join'
 
 const IndexPage = () => (
   <Layout>
     <Banner />
-    <Themes />
+    <div id="themes">
+      <Themes />
+    </div>
     <div id="speakers">
       <Speakers />
     </div>
     <div id="agenda">
       <Agenda />
     </div>
-    <div id="previous">
-      <Previous />
-    </div>
     <div id="partners">
       <Partners />
+    </div>
+    <div id="join">
+      <Join />
     </div>
   </Layout>
 )

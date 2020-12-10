@@ -5,7 +5,6 @@ import previousWeb from '../images/prevw.png'
 import previousMobile from '../images/prevm.png'
 
 import TitleDivider from './titleDivider'
-import ComponentDivider from './componentDivider'
 
 const PreviousContainer = styled.div`
   padding: 6rem 0;
@@ -59,24 +58,20 @@ class Previous extends React.Component {
     let { windowWidth } = this.state
 
     return (
-      <>
-        <PreviousContainer className="section previous">
-          <PreviousTitle>
-            历届回顾
-            <TitleDivider />
-          </PreviousTitle>
+      <PreviousContainer className="section previous">
+        <PreviousTitle>
+          历届回顾
+          <TitleDivider />
+        </PreviousTitle>
 
-          <PreviousInner>
-            {windowWidth > 1080 ? (
-              <PreviousImg src={previousWeb} alt="历届回顾" title="历届回顾" />
-            ) : (
-              <PreviousImg src={previousMobile} alt="历届回顾" title="历届回顾" />
-            )}
-          </PreviousInner>
-        </PreviousContainer>
-
-        <ComponentDivider />
-      </>
+        <PreviousInner>
+          {windowWidth > 1080 ? (
+            <PreviousImg src={previousWeb} alt="历届回顾" title="历届回顾" />
+          ) : (
+            <PreviousImg src={previousMobile} alt="历届回顾" title="历届回顾" />
+          )}
+        </PreviousInner>
+      </PreviousContainer>
     )
   }
 }

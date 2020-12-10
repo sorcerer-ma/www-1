@@ -1,40 +1,68 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 
-import { PartnersTitle, PartnersListWrapper, PartnersItem, PartnerLogo } from './partners'
-
-import IconRubyChina from '../images/ruby-china.jpg'
+import {
+  PartnersTitle,
+  PartnersListWrapper,
+  PartnersItem,
+  PartnerLogo,
+  Tip
+} from './partners'
 
 import TitleDivider from './titleDivider'
 
 const PartnerSupporter = () => (
-  <React.Fragment>
-    <PartnersTitle
-      style={{
-        paddingTop: '6rem'
-      }}
-    >
-      社区支持
-      <TitleDivider />
-    </PartnersTitle>
+  <StaticQuery
+    query={graphql`
+      query SupporterQuery {
+        allPrismicMedia(sort: { fields: [data___order] }) {
+          edges {
+            node {
+              data {
+                id
+                name
+                logo {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <React.Fragment>
+        <PartnersTitle
+          style={{
+            paddingTop: '6rem'
+          }}
+        >
+          社区支持
+          <TitleDivider />
+        </PartnersTitle>
 
-    <PartnersListWrapper>
-      <PartnersItem>
-        <PartnerLogo
-          src={IconRubyChina}
-          alt="Ruby China"
-          title="Ruby China"
-        />
-      </PartnersItem>
+        <PartnersListWrapper>
+          {data.allPrismicMedia.edges.map(p => {
+            const { id, name, logo } = p.node.data
 
-      <PartnersItem>
-        <PartnerLogo
-          src={IconRubyChina}
-          alt="Ruby China"
-          title="Ruby China"
-        />
-      </PartnersItem>
-    </PartnersListWrapper>
-  </React.Fragment>
+            return (
+              <PartnersItem
+                key={`supporter-${id}`}
+              >
+                <PartnerLogo
+                  src={logo.url}
+                  alt={name}
+                  title={name}
+                />
+              </PartnersItem>
+            )
+          })}
+        </PartnersListWrapper>
+
+        <Tip>更多合作伙伴和社区正在加入我们</Tip>
+      </React.Fragment>
+    )}
+  />
 )
 
 export default PartnerSupporter

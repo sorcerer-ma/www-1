@@ -6,7 +6,6 @@ import IconData from '../images/icon-data.png'
 import IconBlock from '../images/icon-block.png'
 
 import TitleDivider from './titleDivider'
-import ComponentDivider from './componentDivider'
 
 const ThemesContainer = styled.div`
   padding: 6rem 0;
@@ -22,7 +21,7 @@ const ThemesTitle = styled.h2`
 `
 
 const ThemesInner = styled.div`
-  margin: 6rem 0 4rem;
+  margin: 8rem 0 4rem;
   display: -webkit-flex; /* Safari */
   display: flex;
   justify-content: center;
@@ -66,32 +65,28 @@ const data = [
 ]
 
 const Themes = () => (
-  <>
-    <ThemesContainer className="section themes">
-      <ThemesTitle>
-        三大技术主题
-        <TitleDivider />
-      </ThemesTitle>
+  <ThemesContainer className="section themes">
+    <ThemesTitle>
+      三大技术主题
+      <TitleDivider />
+    </ThemesTitle>
 
-      <ThemesInner className="clearfix">
-        {data.map((d, i) => (
-          <ThemesItem key={i}>
-            <ThemesItemIcon
-              src={d.icon}
-              title={d.title}
-              alt={d.title}
-            />
+    <ThemesInner className="clearfix">
+      {data.map((d, i) => (
+        <ThemesItem key={i}>
+          <ThemesItemIcon
+            src={d.icon}
+            title={d.title}
+            alt={d.title}
+          />
 
-            <ThemesItemTitle>
-              {d.title}
-            </ThemesItemTitle>
-          </ThemesItem>
-        ))}
-      </ThemesInner>
-    </ThemesContainer>
-
-    <ComponentDivider />
-  </>
+          <ThemesItemTitle>
+            {d.title}
+          </ThemesItemTitle>
+        </ThemesItem>
+      ))}
+    </ThemesInner>
+  </ThemesContainer>
 )
 
 export default Themes

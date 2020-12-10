@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { StaticQuery, graphql, Link } from 'gatsby'
 
 import TitleDivider from './titleDivider'
-import ComponentDivider from './componentDivider'
 
 const SpeakersContainer = styled.div`
   padding: 6rem 0;
@@ -35,8 +34,7 @@ const SpeakersItem = styled.div`
 const SpeakerPhoto = styled.img`
   width: 100%;
   height: auto;
-  border: .4rem solid #2C59D8;
-  box-shadow: -1rem 1rem 0 .2rem rgba(0, 0, 0, 1);
+  box-shadow: 0 0 1rem 0 #000;
 `
 
 const SpeakerName = styled.h2`
@@ -53,6 +51,12 @@ const SpeakerInfo = styled.p`
   font-size: 1.6rem;
   text-align: center;
   line-height: 3.2rem;
+`
+
+const Tip = styled.div`
+  color: #FFF;
+  font-size: 3.2rem;
+  line-height: 4rem;
 `
 
 const SpeakersList = () => (
@@ -101,18 +105,16 @@ const SpeakersList = () => (
 )
 
 const Speakers = () => (
-  <>
-    <SpeakersContainer className="section speakers">
-      <SpeakersTitle>
-        演讲嘉宾
-        <TitleDivider />
-      </SpeakersTitle>
+  <SpeakersContainer className="section speakers">
+    <SpeakersTitle>
+      演讲嘉宾
+      <TitleDivider />
+    </SpeakersTitle>
 
-      <SpeakersList />
-    </SpeakersContainer>
+    <SpeakersList />
 
-    <ComponentDivider />
-  </>
+    <Tip>更多嘉宾，敬请期待</Tip>
+  </SpeakersContainer>
 )
 
 export default Speakers

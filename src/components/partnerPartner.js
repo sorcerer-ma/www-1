@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby'
 import { PartnersTitle, PartnersListWrapper, PartnersItem, PartnerLogo } from './partners'
 
 import TitleDivider from './titleDivider'
-import ComponentDivider from './componentDivider'
 
 const PartnerPartner = () => (
   <StaticQuery
@@ -43,8 +42,6 @@ const PartnerPartner = () => (
             )
           })}
         </PartnersListWrapper>
-
-        <ComponentDivider />
       </React.Fragment>
     )}
   />

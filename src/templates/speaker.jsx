@@ -21,8 +21,7 @@ const SpeakerPhoto = styled.img`
   width: 22rem;
   height: auto;
   margin: 0 8rem 0 0;
-  border: .4rem solid #2C59D8;
-  box-shadow: -1rem 1rem 0 .2rem rgba(0, 0, 0, 1);
+  box-shadow: 0 0 1rem 0 #000;
   flex: 0 0 auto;
 
   @media only screen and (max-width: 767px) {

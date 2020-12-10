@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
 import TitleDivider from './titleDivider'
-import ComponentDivider from './componentDivider'
 
 const AgendaContainer = styled.div`
   padding: 6rem 0;
@@ -29,8 +28,8 @@ const AgendaGroup = styled.div`
   @media only screen and (max-width: 1279px) {
     display: -webkit-flex; /* Safari */
     display: flex;
-    align-items: flex-start;
     justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
 `
@@ -64,8 +63,8 @@ const AgendaGroupItem = styled.div`
   line-height: 3.2rem;
   display: -webkit-flex; /* Safari */
   display: flex;
-  align-items: flex-start;
   justify-content: space-around;
+  align-items: flex-start;
 
   @media only screen and (max-width: 1279px) {
     width: calc(50% - 12rem);
@@ -84,29 +83,18 @@ const AgendaGroupItem = styled.div`
   }
 `
 
-const AgendaItemTime = styled.div`
-  width: 14rem;
-  flex: 0 0 auto;
-`
-
 const AgendaItemSpeakTitle = styled.div`
   width: 40rem;
-  margin-left: 2rem;
   flex: 0 0 auto;
 `
 
 const AgendaItemSpeakerName = styled.div`
   width: 10rem;
-  margin-left: 2rem;
+  margin-left: 6rem;
   flex: 0 0 auto;
 `
 
 const AgendaItemSpeakerDesc = styled.div`
-  margin-left: 2rem;
-  flex: 1 1 auto;
-`
-
-const AgendaItemWorkshopDesc = styled.div`
   margin-left: 2rem;
   flex: 1 1 auto;
 `
@@ -128,11 +116,9 @@ const AgendaList = () => (
                 data {
                   type
                   time
-                  duration
                   title
                   speaker_name
                   speaker_desc
-                  workshop_desc
                 }
               }
             }
@@ -152,45 +138,23 @@ const AgendaList = () => (
               </AgendaGroupTitle>
 
               {group.edges.map((agd, ai) => {
-                const { type, duration, title, speaker_name, speaker_desc, workshop_desc } = agd.node.data
+                const { title, speaker_name, speaker_desc } = agd.node.data
 
-                if (type === 'lecture') {
-                  return (
-                    <AgendaGroupItem key={ai}>
-                      <AgendaItemTime>
-                        {duration}
-                      </AgendaItemTime>
+                return (
+                  <AgendaGroupItem key={ai}>
+                    <AgendaItemSpeakTitle>
+                      {title}
+                    </AgendaItemSpeakTitle>
 
-                      <AgendaItemSpeakTitle>
-                        {title}
-                      </AgendaItemSpeakTitle>
+                    <AgendaItemSpeakerName>
+                      {speaker_name}
+                    </AgendaItemSpeakerName>
 
-                      <AgendaItemSpeakerName>
-                        {speaker_name}
-                      </AgendaItemSpeakerName>
-
-                      <AgendaItemSpeakerDesc>
-                        {speaker_desc}
-                      </AgendaItemSpeakerDesc>
-                    </AgendaGroupItem>
-                  )
-                }
-
-                if (type === 'workshop') {
-                  return (
-                    <AgendaGroupItem key={ai}>
-                      <AgendaItemTime>
-                        {duration}
-                      </AgendaItemTime>
-
-                      <AgendaItemWorkshopDesc>
-                        {workshop_desc}
-                      </AgendaItemWorkshopDesc>
-                    </AgendaGroupItem>
-                  )
-                }
-
-                return null
+                    <AgendaItemSpeakerDesc>
+                      {speaker_desc}
+                    </AgendaItemSpeakerDesc>
+                  </AgendaGroupItem>
+                )
               })}
 
               {showDivider ? <AgendaGroupDivider /> : null}
@@ -203,18 +167,14 @@ const AgendaList = () => (
 )
 
 const Agenda = () => (
-  <>
-    <AgendaContainer className="section agenda">
-      <AgendaTitle>
-        大会议程
-        <TitleDivider />
-      </AgendaTitle>
+  <AgendaContainer className="section agenda">
+    <AgendaTitle>
+      大会议程
+      <TitleDivider />
+    </AgendaTitle>
 
-      <AgendaList />
-    </AgendaContainer>
-
-    <ComponentDivider />
-  </>
+    <AgendaList />
+  </AgendaContainer>
 )
 
 export default Agenda

@@ -32,7 +32,7 @@ export const PartnersListWrapper = styled.div`
 
 export const PartnersItem = styled.div`
   width: 220px;
-  margin: 0 6rem 8rem 6rem;
+  margin: 0 4rem 8rem 4rem;
 `
 
 export const PartnerLogo = styled.img`
@@ -40,13 +40,16 @@ export const PartnerLogo = styled.img`
   height: auto;
 `
 
+export const Tip = styled.div`
+  color: #FFF;
+  font-size: 3.2rem;
+  line-height: 4rem;
+`
+
 const Partners = () => (
   <PartnersContainer className="section partners">
-    {/* <PartnerOrganizer /> */}
-    {/* <PartnerThanks /> */}
     <PartnerPartner />
-    {/* <PartnerMedia /> */}
-    {/* <PartnerRegister /> */}
+
     <PartnerSupporter />
   </PartnersContainer>
 )

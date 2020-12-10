@@ -1,34 +1,40 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import ComponentDivider from './componentDivider'
+import ImgBannerBg from '../images/img-banner-bg.jpg'
+import ImgBannerTitle from '../images/img-banner-title.png'
 
 const BannerContainer = styled.div`
+  position: relative;
   margin: 0 auto;
+
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-image: url(${ImgBannerBg});
+
   display: -webkit-flex; /* Safari */
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
-// const BannerTitleImage = styled.img`
-//   width: 768px;
-//   margin-top: 6rem;
-//   min-height: 20rem;
-//   background-color: #DDD;
-
-//   @media only screen and (max-width: 767px) {
-//     width: 80%;
-//   }
-// `
-
-const BannerBtnWrapper = styled.div`
-  width: 80%;
+const BannerTitleImage = styled.img`
+  width: 768px;
+  height: auto;
   margin-top: 10rem;
-  text-align: center;
+
+  @media only screen and (max-width: 767px) {
+    width: 80%;
+  }
+`
+
+const BannerDescWrapper = styled.div`
+  width: 80%;
+  margin-top: 4rem;
   display: -webkit-flex; /* Safari */
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 
   @media only screen and (max-width: 767px) {
@@ -36,29 +42,34 @@ const BannerBtnWrapper = styled.div`
   }
 `
 
-const BannerBtnDesc = styled.div`
+const BannerDescItem = styled.div`
+  width: 40%;
   color: #FFF;
   font-size: 2.4rem;
+  line-height: 3.6rem;
   flex: 0 1 auto;
 
-  & > p {
-    margin: 0;
-    line-height: 3rem;
+  &:first-of-type {
+    text-align: right;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: auto;
+    text-align: center;
   }
 `
 
 const BannerBuyBtn = styled.a`
-  margin-left: 20%;
+  margin-top: 5rem;
   padding: 1rem 3rem;
   color: #2C5AD8;
   border-radius: .4rem;
   background-color: #FFF;
   font-size: 2.4rem;
   text-decoration: none;
-  box-shadow: .6rem .6rem .8rem 0 rgba(43, 89, 216, .3);
+  box-shadow: .6rem .6rem 1rem 0 rgba(44, 90, 216, .6);
   transition: all .3s;
   outline: none;
-  flex: 0 1 auto;
 
   &:active,
   &:focus {
@@ -79,14 +90,14 @@ const BannerBuyBtn = styled.a`
 
 const BannerInfo = styled.div`
   width: 80%;
-  margin-top: 10rem;
+  margin-top: 6rem;
   display: -webkit-flex; /* Safari */
   display: flex;
-  align-items: flex-start;
   justify-content: space-around;
+  align-items: flex-start;
 
   & > div {
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
     width: 40%;
     flex: 0 1 auto;
   }
@@ -121,22 +132,29 @@ const BannerInfoDesc = styled.div`
 
 const Banner = () => (
   <BannerContainer className="section banner">
-    {/* <BannerTitleImage /> */}
+    <BannerTitleImage
+      src={ImgBannerTitle}
+      alt="云上有为，未来无界，2021 ECUG Con 全球技术大会"
+      title="云上有为，未来无界，2021 ECUG Con 全球技术大会"
+    />
 
-    <BannerBtnWrapper>
-      <BannerBtnDesc>
-        <p>中国&nbsp;&middot;&nbsp;上海</p>
-        <p>2021.1.16 - 1.17</p>
-      </BannerBtnDesc>
+    <BannerDescWrapper>
+      <BannerDescItem>
+        中国&nbsp;&middot;&nbsp;上海
+      </BannerDescItem>
 
-      <BannerBuyBtn
-        href=""
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        立即参会
-      </BannerBuyBtn>
-    </BannerBtnWrapper>
+      <BannerDescItem>
+        2021.1.16 - 1.17
+      </BannerDescItem>
+    </BannerDescWrapper>
+
+    <BannerBuyBtn
+      href="https://sensors.qiniu.com/t/a1K"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      点击抢购 - 早鸟票
+    </BannerBuyBtn>
 
     <BannerInfo>
       <div>
@@ -157,8 +175,6 @@ const Banner = () => (
         </BannerInfoDesc>
       </div>
     </BannerInfo>
-
-    <ComponentDivider />
   </BannerContainer>
 )
 

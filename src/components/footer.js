@@ -1,47 +1,83 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import qrcode from '../images/qrcode.jpg'
+import ImgFooterBg from '../images/img-footer-bg.jpg'
+import qrcode from '../images/qrcode.png'
+import ImgTraffic from '../images/img-traffic.png'
 
 const FooterContainer = styled.div`
   padding: 8rem 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(${ImgFooterBg});
 `
 
 const FooterInner = styled.div`
   display: -webkit-flex; /* Safari */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1279px) {
     flex-direction: column;
+    align-items: center;
+  }
+`
+
+const Title = styled.div`
+  color: #FFF;
+  margin-bottom: 1.2rem;
+  font-size: 2.4rem;
+
+  @media only screen and (max-width: 1279px) {
+    text-align: center;
   }
 `
 
 const FooterContacts = styled.div`
+  margin: 0 4rem;
   color: #FFF;
-  font-size: 1.6rem;
-  line-height: 3.2rem;
+  font-size: 1.4rem;
+  line-height: 3.4rem;
   flex: 0 1 auto;
 `
 
-const FooterQrcode = styled.div`
-  margin-left: 20%;
+const FooterTraffic = styled.div`
+  margin: 0 4rem;
   color: #FFF;
-  font-size: 1.6rem;
-  line-height: 3.2rem;
-  text-align: center;
+  font-size: 1.4rem;
+  line-height: 3.4rem;
   flex: 0 1 auto;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1279px) {
     margin-top: 4rem;
-    margin-left: 0;
+    text-align: center;
+  }
+`
+
+const FooterTrafficImg = styled.img`
+  width: auto;
+  height: 240px;
+  margin: 0;
+`
+
+const FooterQrcode = styled.div`
+  margin: 0 4rem;
+  color: #FFF;
+  font-size: 1.4rem;
+  line-height: 3.4rem;
+  flex: 0 1 auto;
+
+  @media only screen and (max-width: 1279px) {
+    margin-top: 4rem;
   }
 `
 
 const FooterQrcodeImg = styled.img`
-  width: 140px;
-  height: 140px;
+  width: auto;
+  height: 240px;
   margin: 0;
 `
 
@@ -49,25 +85,36 @@ const Footer = () => (
   <FooterContainer className="section footer">
     <FooterInner>
       <FooterContacts>
-        联&nbsp;&nbsp;系 人：郭女士
+        <Title>联系我们</Title>
+        购票热线：+400-808-9176 转 3
         <br />
-        联系电话：+ 86 186 6898 1922
+        商务赞助：zhangcheng@qiniu.com
         <br />
-        邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：marketing@qiniu.com
+        媒体支持：wangqun01@qiniu.com
         <br />
-        时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间：2021 年 1 月 16 日 ~ 17 日
-        <br />
-        会议地址：杭州市上城区 白云路 9 号 - 江南 1535
+        议题申请：marketing@qiniu.com
       </FooterContacts>
 
-      <FooterQrcode>
-        <FooterQrcodeImg
-          src={qrcode}
-          alt="关注我们"
-          title="关注我们"
+      <FooterTraffic>
+        <Title>交通指南</Title>
+        <FooterTrafficImg
+          src={ImgTraffic}
+          alt="交通指南"
+          title="交通指南"
         />
         <br />
-        关注我们
+        会议时间：2021 年 1 月 16 日 - 17 日
+        <br />
+        会议地址：上海市静安区万荣路 1053 号第一车间（静安兴业坊）
+      </FooterTraffic>
+
+      <FooterQrcode>
+        <Title>会务助手</Title>
+        <FooterQrcodeImg
+          src={qrcode}
+          alt="会务助手"
+          title="会务助手"
+        />
       </FooterQrcode>
     </FooterInner>
   </FooterContainer>

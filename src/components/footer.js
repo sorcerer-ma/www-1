@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import ImgFooterBg from '../images/img-footer-bg.jpg'
 import qrcode from '../images/qrcode.png'
+import ImgTraffic from '../images/img-traffic.png'
 
 const FooterContainer = styled.div`
   padding: 8rem 0;
@@ -19,7 +20,7 @@ const FooterInner = styled.div`
   justify-content: center;
   align-items: flex-start;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1279px) {
     flex-direction: column;
     align-items: center;
   }
@@ -30,7 +31,7 @@ const Title = styled.div`
   margin-bottom: 1.2rem;
   font-size: 2.4rem;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1279px) {
     text-align: center;
   }
 `
@@ -50,7 +51,7 @@ const FooterTraffic = styled.div`
   line-height: 3.4rem;
   flex: 0 1 auto;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1279px) {
     margin-top: 4rem;
     text-align: center;
   }
@@ -58,7 +59,7 @@ const FooterTraffic = styled.div`
 
 const FooterTrafficImg = styled.img`
   width: auto;
-  height: 140px;
+  height: 240px;
   margin: 0;
 `
 
@@ -69,14 +70,14 @@ const FooterQrcode = styled.div`
   line-height: 3.4rem;
   flex: 0 1 auto;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 1279px) {
     margin-top: 4rem;
   }
 `
 
 const FooterQrcodeImg = styled.img`
-  width: 140px;
-  height: 140px;
+  width: auto;
+  height: 240px;
   margin: 0;
 `
 
@@ -97,7 +98,7 @@ const Footer = () => (
       <FooterTraffic>
         <Title>交通指南</Title>
         <FooterTrafficImg
-          src={qrcode}
+          src={ImgTraffic}
           alt="交通指南"
           title="交通指南"
         />

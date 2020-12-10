@@ -149,7 +149,7 @@ const Banner = () => (
     </BannerDescWrapper>
 
     <BannerBuyBtn
-      href=""
+      href="https://sensors.qiniu.com/t/a1K"
       target="_blank"
       rel="noreferrer noopener"
     >

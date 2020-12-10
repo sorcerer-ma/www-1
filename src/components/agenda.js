@@ -41,15 +41,6 @@ const AgendaGroupTitle = styled.div`
   font-size: 2.4rem;
   line-height: 3.6rem;
 
-  &:before {
-    content: " ";
-    width: 1em;
-    height: .2rem;
-    position: absolute;
-    top: 100%;
-    background-color: #2C59D8;
-  }
-
   @media only screen and (max-width: 1279px) {
     width: calc(100% - 12rem);
     flex: 0 1 auto;

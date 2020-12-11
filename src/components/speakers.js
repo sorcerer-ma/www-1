@@ -10,6 +10,10 @@ const SpeakersContainer = styled.div`
   padding: 6rem 0;
   max-width: 1080px;
   text-align: center;
+
+  @media only screen and (max-width: 767px) {
+    padding-bottom: 0;
+  }
 `
 
 const SpeakersTitle = styled.h2`
@@ -31,6 +35,11 @@ const SpeakersListWrapper = styled.div`
 const SpeakersItem = styled.div`
   width: 22rem;
   margin: 0 6rem 4rem;
+
+  @media only screen and (max-width: 767px) {
+    width: 14rem;
+    margin: 0 1rem 4rem;
+  }
 `
 
 const SpeakerPhoto = styled.img`
@@ -45,6 +54,11 @@ const SpeakerName = styled.h2`
   font-size: 2.4rem;
   text-align: center;
   line-height: 3rem;
+
+  @media only screen and (max-width: 767px) {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+  }
 `
 
 const SpeakerInfo = styled.p`
@@ -53,12 +67,20 @@ const SpeakerInfo = styled.p`
   font-size: 1.4rem;
   text-align: center;
   line-height: 3rem;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 1.4rem;
+  }
 `
 
 const Tip = styled.div`
   color: #FFF;
   font-size: 3.2rem;
   line-height: 4rem;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 2.4rem;
+  }
 `
 
 const SpeakersList = () => (

@@ -32,11 +32,7 @@ const PartnerSupporter = () => (
     `}
     render={data => (
       <React.Fragment>
-        <PartnersTitle
-          style={{
-            paddingTop: '6rem'
-          }}
-        >
+        <PartnersTitle>
           社区支持
           <TitleDivider />
         </PartnersTitle>

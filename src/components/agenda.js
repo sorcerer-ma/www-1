@@ -10,6 +10,10 @@ const AgendaContainer = styled.div`
   margin: 0 auto;
   padding: 6rem 0;
   max-width: 1080px;
+
+  @media only screen and (max-width: 767px) {
+    padding-bottom: 0;
+  }
 `
 
 const AgendaTitle = styled.h2`

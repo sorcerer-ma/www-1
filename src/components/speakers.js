@@ -30,6 +30,10 @@ const SpeakersListWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media only screen and (max-width: 767px) {
+    justify-content: space-around;
+  }
 `
 
 const SpeakersItem = styled.div`
@@ -37,8 +41,8 @@ const SpeakersItem = styled.div`
   margin: 0 6rem 4rem;
 
   @media only screen and (max-width: 767px) {
-    width: 14rem;
-    margin: 0 1rem 4rem;
+    width: 32%;
+    margin: 0 0 4rem;
   }
 `
 
@@ -69,7 +73,7 @@ const SpeakerInfo = styled.p`
   line-height: 3rem;
 
   @media only screen and (max-width: 767px) {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 `
 

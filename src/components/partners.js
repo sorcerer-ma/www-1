@@ -14,6 +14,10 @@ const PartnersContainer = styled.div`
   padding: 6rem 0;
   max-width: 1080px;
   text-align: center;
+
+  @media only screen and (max-width: 767px) {
+    padding-bottom: 0;
+  }
 `
 
 export const PartnersTitle = styled.h2`
@@ -30,11 +34,20 @@ export const PartnersListWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @media only screen and (max-width: 767px) {
+    justify-content: space-around;
+  }
 `
 
 export const PartnersItem = styled.div`
   width: 22rem;
   margin: 0 2rem 6rem;
+
+  @media only screen and (max-width: 767px) {
+    width: 40%;
+    margin: 0 0 6rem;
+  }
 `
 
 export const PartnerLogo = styled.img`

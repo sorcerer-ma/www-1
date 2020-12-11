@@ -122,12 +122,8 @@ const BannerInfoTitle = styled.h2`
 
 const BannerInfoDesc = styled.div`
   color: #FFF;
-  font-size: 2rem;
-  line-height: 3.6rem;
-
-  p {
-    margin: 0;
-  }
+  font-size: 1.6rem;
+  line-height: 3.2rem;
 `
 
 const Banner = () => (
@@ -162,8 +158,7 @@ const Banner = () => (
           ECUG
         </BannerInfoTitle>
         <BannerInfoDesc>
-          <p>自 2007 年，Effective Cloud User Group</p>
-          <p>一个洋溢技术情怀的社区，关注 A（AI）、B（Big Data）、C（Cloud）前沿技术的经验分享，输出技术人关注的热点干货</p>
+          ECUG 全称为 Effective Cloud User Group（实效云计算用户组），成立于 2007 年的 CN Erlounge II，由许式伟发起，是科技领域不可或缺的高端前沿团体。作为行业技术进步的一扇窗口，ECUG 汇聚众多技术人，关注当下热点技术与尖端实践，共同引领行业技术的变革。
         </BannerInfoDesc>
       </div>
       <div>
@@ -171,7 +166,7 @@ const Banner = () => (
           ECUG Con
         </BannerInfoTitle>
         <BannerInfoDesc>
-          <p>由 ECUG 社区主办的一年一度技术盛会，参会的社区成员涵盖 Google、微软、BAT、华为、京东、携程等知名企业技术高层以及七牛云、饿了么、PingCAP、Kylingence 等创业公司创始人。自 2007 年开始举办以来，已经有逾 4000 名技术从业者参加过 ECUG Con</p>
+          ECUG Con 是由 ECUG 社区主办的技术盛会，发起于 2007 年，目前已成功举办 13 届。期间，来自 Google、微软、BAT、华为、京东、携程等知名企业以及七牛云、PingCAP、饿了么等众多互联网科技公司的权威技术大神纷纷参与，影响了上万名技术从业者。
         </BannerInfoDesc>
       </div>
     </BannerInfo>

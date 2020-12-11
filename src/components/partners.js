@@ -10,7 +10,9 @@ import PartnerPartner from './partnerPartner'
 import PartnerSupporter from './partnerSupporter'
 
 const PartnersContainer = styled.div`
+  margin: 0 auto;
   padding: 6rem 0;
+  max-width: 1080px;
   text-align: center;
 `
 
@@ -31,8 +33,8 @@ export const PartnersListWrapper = styled.div`
 `
 
 export const PartnersItem = styled.div`
-  width: 220px;
-  margin: 0 4rem 8rem 4rem;
+  width: 22rem;
+  margin: 0 2rem 6rem;
 `
 
 export const PartnerLogo = styled.img`

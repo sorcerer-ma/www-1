@@ -39,9 +39,19 @@ const Title = styled.div`
 const FooterContacts = styled.div`
   margin: 0 4rem;
   color: #FFF;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 3.4rem;
   flex: 0 1 auto;
+
+  & > p {
+    margin: 0 0 3rem;
+  }
+
+  @media only screen and (max-width: 1279px) {
+    & > p {
+      margin: 0 0 1.2rem;
+    }
+  }
 `
 
 const FooterTraffic = styled.div`
@@ -57,9 +67,13 @@ const FooterTraffic = styled.div`
   }
 `
 
+const FooterTrafficLink = styled.a`
+  outline: none;
+`
+
 const FooterTrafficImg = styled.img`
   width: auto;
-  height: 240px;
+  height: 220px;
   margin: 0;
 `
 
@@ -77,7 +91,7 @@ const FooterQrcode = styled.div`
 
 const FooterQrcodeImg = styled.img`
   width: auto;
-  height: 240px;
+  height: 220px;
   margin: 0;
 `
 
@@ -86,26 +100,29 @@ const Footer = () => (
     <FooterInner>
       <FooterContacts>
         <Title>联系我们</Title>
-        购票热线：+400-808-9176 转 3
-        <br />
-        商务赞助：zhangcheng@qiniu.com
-        <br />
-        媒体支持：wangqun01@qiniu.com
-        <br />
-        议题申请：marketing@qiniu.com
+        <p>购票热线：+400-808-9176 转 3</p>
+        <p>商务赞助：zhangcheng@qiniu.com</p>
+        <p>媒体支持：wangqun01@qiniu.com</p>
+        <p>议题申请：marketing@qiniu.com</p>
       </FooterContacts>
 
       <FooterTraffic>
         <Title>交通指南</Title>
-        <FooterTrafficImg
-          src={ImgTraffic}
-          alt="交通指南"
-          title="交通指南"
-        />
+        <FooterTrafficLink
+          href={`https://api.map.baidu.com/geocoder?address=${encodeURIComponent('上海市静安区万荣路1053号')}&output=html&src=webapp.baidu.openAPIdemo`}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <FooterTrafficImg
+            src={ImgTraffic}
+            alt="交通指南"
+            title="点击查看地图"
+          />
+        </FooterTrafficLink>
         <br />
         会议时间：2021 年 1 月 16 日 - 17 日
         <br />
-        会议地址：上海市静安区万荣路 1053 号第一车间（静安兴业坊）
+        会议地址：上海市静安区万荣路 1053 号第一车间（静安新业坊）
       </FooterTraffic>
 
       <FooterQrcode>

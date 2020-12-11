@@ -6,7 +6,9 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 import TitleDivider from './titleDivider'
 
 const SpeakersContainer = styled.div`
+  margin: 0 auto;
   padding: 6rem 0;
+  max-width: 1080px;
   text-align: center;
 `
 
@@ -27,8 +29,8 @@ const SpeakersListWrapper = styled.div`
 `
 
 const SpeakersItem = styled.div`
-  width: 26rem;
-  margin: 0 8rem 4rem;
+  width: 22rem;
+  margin: 0 6rem 4rem;
 `
 
 const SpeakerPhoto = styled.img`
@@ -47,10 +49,10 @@ const SpeakerName = styled.h2`
 
 const SpeakerInfo = styled.p`
   margin: 0;
-  color: #2C59D8;
-  font-size: 1.6rem;
+  color: #FFF;
+  font-size: 1.4rem;
   text-align: center;
-  line-height: 3.2rem;
+  line-height: 3rem;
 `
 
 const Tip = styled.div`

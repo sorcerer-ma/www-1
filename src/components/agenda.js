@@ -6,9 +6,10 @@ import { StaticQuery, graphql } from 'gatsby'
 import TitleDivider from './titleDivider'
 
 const AgendaContainer = styled.div`
-  padding: 6rem 0;
   width: 80%;
   margin: 0 auto;
+  padding: 6rem 0;
+  max-width: 1080px;
 `
 
 const AgendaTitle = styled.h2`
@@ -40,15 +41,6 @@ const AgendaGroupTitle = styled.div`
   color: #2C59D8;
   font-size: 2.4rem;
   line-height: 3.6rem;
-
-  &:before {
-    content: " ";
-    width: 1em;
-    height: .2rem;
-    position: absolute;
-    top: 100%;
-    background-color: #2C59D8;
-  }
 
   @media only screen and (max-width: 1279px) {
     width: calc(100% - 12rem);

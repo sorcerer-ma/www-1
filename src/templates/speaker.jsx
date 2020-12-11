@@ -46,7 +46,7 @@ const SpeakerName = styled.h2`
 
 const SpeakerTitle = styled.p`
   margin: 0 0 .8rem 0;
-  color: #2C59D8;
+  color: #FFF;
   font-size: 2.2rem;
   line-height: 1.5;
 `

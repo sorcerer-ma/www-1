@@ -10,6 +10,10 @@ import TitleDivider from './titleDivider'
 const ThemesContainer = styled.div`
   padding: 6rem 0;
   text-align: center;
+
+  @media only screen and (max-width: 767px) {
+    padding-bottom: 0;
+  }
 `
 
 const ThemesTitle = styled.h2`
@@ -28,7 +32,7 @@ const ThemesInner = styled.div`
   flex-wrap: wrap;
 
   @media only screen and (max-width: 900px) {
-    flex-direction: column;
+    margin-bottom: 0;
   }
 `
 
@@ -37,16 +41,21 @@ const ThemesItem = styled.div`
   box-sizing: border-box;
 
   @media only screen and (max-width: 900px) {
+    width: 240px;
     margin: 0 auto;
     margin-bottom: 4rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 120px;
   }
 `
 
 const ThemesItemIcon = styled.img`
-  width: 160px;
+  height: 140px;
 
-  @media only screen and (max-width: 900px) {
-    width: 120px;
+  @media only screen and (max-width: 767px) {
+    height: 80px;
   }
 `
 
@@ -56,6 +65,10 @@ const ThemesItemTitle = styled.h2`
   color: #FFF;
   font-size: 3rem;
   text-align: center;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 2rem;
+  }
 `
 
 const data = [

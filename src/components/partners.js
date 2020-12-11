@@ -46,6 +46,10 @@ export const Tip = styled.div`
   color: #FFF;
   font-size: 3.2rem;
   line-height: 4rem;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 2.4rem;
+  }
 `
 
 const Partners = () => (

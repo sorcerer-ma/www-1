@@ -27,7 +27,7 @@ const SpeakersListWrapper = styled.div`
 `
 
 const SpeakersItem = styled.div`
-  width: 26rem;
+  width: 22rem;
   margin: 0 8rem 4rem;
 `
 

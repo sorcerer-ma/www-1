@@ -67,6 +67,10 @@ const FooterTraffic = styled.div`
   }
 `
 
+const FooterTrafficLink = styled.a`
+  outline: none;
+`
+
 const FooterTrafficImg = styled.img`
   width: auto;
   height: 220px;
@@ -104,15 +108,21 @@ const Footer = () => (
 
       <FooterTraffic>
         <Title>交通指南</Title>
-        <FooterTrafficImg
-          src={ImgTraffic}
-          alt="交通指南"
-          title="交通指南"
-        />
+        <FooterTrafficLink
+          href={`https://api.map.baidu.com/geocoder?address=${encodeURIComponent('上海市静安区万荣路1053号')}&output=html&src=webapp.baidu.openAPIdemo`}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <FooterTrafficImg
+            src={ImgTraffic}
+            alt="交通指南"
+            title="点击查看地图"
+          />
+        </FooterTrafficLink>
         <br />
         会议时间：2021 年 1 月 16 日 - 17 日
         <br />
-        会议地址：上海市静安区万荣路 1053 号第一车间（静安兴业坊）
+        会议地址：上海市静安区万荣路 1053 号第一车间（静安新业坊）
       </FooterTraffic>
 
       <FooterQrcode>

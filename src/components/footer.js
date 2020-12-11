@@ -39,9 +39,19 @@ const Title = styled.div`
 const FooterContacts = styled.div`
   margin: 0 4rem;
   color: #FFF;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 3.4rem;
   flex: 0 1 auto;
+
+  & > p {
+    margin: 0 0 3rem;
+  }
+
+  @media only screen and (max-width: 1279px) {
+    & > p {
+      margin: 0 0 1.2rem;
+    }
+  }
 `
 
 const FooterTraffic = styled.div`
@@ -59,7 +69,7 @@ const FooterTraffic = styled.div`
 
 const FooterTrafficImg = styled.img`
   width: auto;
-  height: 240px;
+  height: 220px;
   margin: 0;
 `
 
@@ -77,7 +87,7 @@ const FooterQrcode = styled.div`
 
 const FooterQrcodeImg = styled.img`
   width: auto;
-  height: 240px;
+  height: 220px;
   margin: 0;
 `
 
@@ -86,13 +96,10 @@ const Footer = () => (
     <FooterInner>
       <FooterContacts>
         <Title>联系我们</Title>
-        购票热线：+400-808-9176 转 3
-        <br />
-        商务赞助：zhangcheng@qiniu.com
-        <br />
-        媒体支持：wangqun01@qiniu.com
-        <br />
-        议题申请：marketing@qiniu.com
+        <p>购票热线：+400-808-9176 转 3</p>
+        <p>商务赞助：zhangcheng@qiniu.com</p>
+        <p>媒体支持：wangqun01@qiniu.com</p>
+        <p>议题申请：marketing@qiniu.com</p>
       </FooterContacts>
 
       <FooterTraffic>

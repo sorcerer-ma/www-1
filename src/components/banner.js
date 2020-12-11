@@ -62,24 +62,30 @@ const BannerDescItem = styled.div`
 const BannerBuyBtn = styled.a`
   margin-top: 5rem;
   padding: 1rem 3rem;
-  color: #2C5AD8;
+  color: #2B5ADB;
+  border: .4rem solid #2B5ADB;
   border-radius: .4rem;
-  background-color: #FFF;
+  background-color: #EFF4FC;
+  background-image: linear-gradient(#EFF4FC, #879FE8);
   font-size: 2.4rem;
+  font-weight: 800;
+  font-style: italic;
   text-decoration: none;
-  box-shadow: .6rem .6rem 1rem 0 rgba(44, 90, 216, .6);
+  box-shadow: .6rem .6rem .2rem .1rem rgba(44, 90, 216, .4);
   transition: all .3s;
   outline: none;
 
   &:active,
   &:focus {
-    color: #2C5AD8;
-    background-color: #FFF;
+    color: #2B5ADB;
+    background-color: #EFF4FC;
+    background-image: linear-gradient(#EFF4FC, #879FE8);
   }
 
   &:hover {
-    color: #FFF;
-    background-color: #2C5AD8;
+    color: #EFF4FC;
+    background-color: #2B5ADB;
+    background-image: none;
   }
 
   @media only screen and (max-width: 767px) {
@@ -148,6 +154,7 @@ const Banner = () => (
       href="https://sensors.qiniu.com/t/a1K"
       target="_blank"
       rel="noreferrer noopener"
+      title="点击抢购 - 早鸟票"
     >
       点击抢购 - 早鸟票
     </BannerBuyBtn>

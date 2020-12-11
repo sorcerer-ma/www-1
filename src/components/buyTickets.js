@@ -8,24 +8,24 @@ const BuyTicketsContainer = styled.div`
 
 const BuyTicketsButton = styled.a`
   padding: 1rem 3rem;
-  color: #2C5AD8;
+  color: #FFF;
   border-radius: .4rem;
-  background-color: #FFF;
+  background-color: #3051C9;
   font-size: 2.4rem;
   text-decoration: none;
-  box-shadow: .6rem .6rem 1rem 0 rgba(44, 90, 216, .6);
+  box-shadow: .6rem .6rem .2rem .1rem rgba(44, 90, 216, .4);
   transition: all .3s;
   outline: none;
 
   &:active,
   &:focus {
-    color: #2C5AD8;
-    background-color: #FFF;
+    color: #FFF;
+    background-color: #3051C9;
   }
 
   &:hover {
-    color: #FFF;
-    background-color: #2C5AD8;
+    color: #3051C9;
+    background-color: #FFF;
   }
 `
 
@@ -35,6 +35,7 @@ const BuyTickets = () => (
       href="https://sensors.qiniu.com/t/a1K"
       target="_blank"
       rel="noreferrer noopener"
+      title="点击抢购 - 早鸟票"
     >
       点击抢购 - 早鸟票
     </BuyTicketsButton>

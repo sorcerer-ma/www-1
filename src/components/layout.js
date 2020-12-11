@@ -55,11 +55,14 @@ const Layout = ({ children }) => (
               name: 'keywords',
               content: data.site.siteMetadata.keywords.join(','),
             },
+            {
+              name: 'format-detection',
+              content: 'telephone=no,date=no,address=no,email=no,url=no'
+            },
           ]}
           link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
         >
           <html lang="zh-CN" />
-          <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no" />
         </Helmet>
 
         {/* 导航 */}

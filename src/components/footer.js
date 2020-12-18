@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import ImgFooterBg from '../images/img-footer-bg.jpg'
-import qrcode from '../images/qrcode.png'
+import qrcode from '../images/qrcode.jpg'
 import ImgTraffic from '../images/img-traffic.png'
 
 const FooterContainer = styled.div`

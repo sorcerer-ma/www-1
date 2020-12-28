@@ -79,7 +79,7 @@ const AgendaGroupItem = styled.div`
   }
 `
 
-const AgendaItemTime = styled.div`
+const AgendaItemDuration = styled.div`
   width: 12rem;
   margin-right: 2rem;
   flex: 0 0 auto;
@@ -92,7 +92,7 @@ const AgendaItemSpeakTitle = styled.div`
 `
 
 const AgendaItemSpeakerName = styled.div`
-  width: 10rem;
+  width: 12rem;
   margin-right: 2rem;
   flex: 0 0 auto;
 `
@@ -142,19 +142,19 @@ const AgendaList = () => (
 
               {group.edges.map((agd, ai) => {
                 const { duration, title, speaker_name, speaker_desc } = agd.node.data
-                const timeView = duration && (
-                  <AgendaItemTime>
+                const durationView = duration && (
+                  <AgendaItemDuration>
                     {duration}
-                  </AgendaItemTime>
+                  </AgendaItemDuration>
                 )
 
                 return (
                   <AgendaGroupItem key={ai}>
-                    {timeView}
+                    {durationView}
 
-                    <AgendaItemSpeakTitle>
-                      <span dangerouslySetInnerHTML={{__html: title}} />
-                    </AgendaItemSpeakTitle>
+                    <AgendaItemSpeakTitle
+                      dangerouslySetInnerHTML={{__html: title}}
+                    />
 
                     <AgendaItemSpeakerName>
                       {speaker_name}

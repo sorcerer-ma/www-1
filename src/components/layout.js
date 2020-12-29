@@ -7,7 +7,9 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Navigation from '../components/navigation'
 import BuyTickets from '../components/buyTickets'
+import Prize from '../components/prize'
 import Footer from '../components/footer'
+
 import favicon from '../images/favicon.png'
 
 import '../styles/reset.css'
@@ -74,6 +76,9 @@ const Layout = ({ children }) => (
 
         {/* 立即购票 */}
         <BuyTickets />
+
+        {/* 现场奖品 */}
+        <Prize />
 
         {/* 页脚 */}
         <Footer />

@@ -12,6 +12,7 @@ const AgendaContainer = styled.div`
   max-width: 1080px;
 
   @media only screen and (max-width: 767px) {
+    width: calc(100% - 4rem);
     padding-bottom: 0;
   }
 `
@@ -50,6 +51,11 @@ const AgendaGroupTitle = styled.div`
     width: calc(100% - 12rem);
     flex: 0 1 auto;
   }
+
+  @media only screen and (max-width: 767px) {
+    width: calc(100% - 4rem);
+    margin: 3rem 2rem;
+  }
 `
 
 const AgendaGroupItem = styled.div`
@@ -63,19 +69,20 @@ const AgendaGroupItem = styled.div`
   align-items: flex-start;
 
   @media only screen and (max-width: 1279px) {
-    width: calc(50% - 12rem);
+    width: calc(100% - 12rem);
     margin-top: 0;
     flex: 0 1 auto;
     flex-direction: column;
 
     & > div {
       width: auto;
-      margin-left: 0;
+      margin-right: 0;
     }
   }
 
   @media only screen and (max-width: 767px) {
-    width: auto;
+    width: calc(100% - 4rem);
+    margin: 0 2rem 3rem;
   }
 `
 
@@ -89,6 +96,10 @@ const AgendaItemSpeakTitle = styled.div`
   width: 40rem;
   margin-right: 2rem;
   flex: 0 0 auto;
+
+  @media only screen and (max-width: 767px) {
+    font-weight: 900;
+  }
 `
 
 const AgendaItemSpeakerName = styled.div`

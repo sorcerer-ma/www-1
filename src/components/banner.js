@@ -29,69 +29,80 @@ const BannerTitleImage = styled.img`
   }
 `
 
-const BannerDescWrapper = styled.div`
-  width: 80%;
+// 先注释相关代码
+// 后面还用得到
+// https://jira.qiniu.io/browse/BO-15501
+// const BannerDescWrapper = styled.div`
+//   width: 80%;
+//   margin-top: 4rem;
+//   display: -webkit-flex; /* Safari */
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+
+//   @media only screen and (max-width: 767px) {
+//     flex-direction: column;
+//   }
+// `
+
+// const BannerDescItem = styled.div`
+//   width: 40%;
+//   color: #FFF;
+//   font-size: 2.4rem;
+//   line-height: 3.6rem;
+//   flex: 0 1 auto;
+
+//   &:first-of-type {
+//     text-align: right;
+//   }
+
+//   @media only screen and (max-width: 767px) {
+//     width: auto;
+//     text-align: center;
+//   }
+// `
+
+// const BannerBuyBtn = styled.a`
+//   margin-top: 5rem;
+//   padding: 1rem 3rem;
+//   color: #2B5ADB;
+//   border: .4rem solid #2B5ADB;
+//   border-radius: .4rem;
+//   background-color: #EFF4FC;
+//   background-image: linear-gradient(#EFF4FC, #879FE8);
+//   font-size: 2.4rem;
+//   font-weight: 800;
+//   font-style: italic;
+//   text-decoration: none;
+//   box-shadow: .6rem .6rem .2rem .1rem rgba(44, 90, 216, .4);
+//   transition: all .3s;
+//   outline: none;
+
+//   &:active,
+//   &:focus {
+//     color: #2B5ADB;
+//     background-color: #EFF4FC;
+//     background-image: linear-gradient(#EFF4FC, #879FE8);
+//   }
+
+//   &:hover {
+//     color: #EFF4FC;
+//     background-color: #2B5ADB;
+//     background-image: none;
+//   }
+
+//   @media only screen and (max-width: 767px) {
+//     margin-top: 2rem;
+//     margin-left: 0;
+//   }
+// `
+
+const BannerNotice = styled.div`
+  width: 72%;
   margin-top: 4rem;
-  display: -webkit-flex; /* Safari */
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  @media only screen and (max-width: 767px) {
-    flex-direction: column;
-  }
-`
-
-const BannerDescItem = styled.div`
-  width: 40%;
   color: #FFF;
-  font-size: 2.4rem;
-  line-height: 3.6rem;
-  flex: 0 1 auto;
-
-  &:first-of-type {
-    text-align: right;
-  }
-
-  @media only screen and (max-width: 767px) {
-    width: auto;
-    text-align: center;
-  }
-`
-
-const BannerBuyBtn = styled.a`
-  margin-top: 5rem;
-  padding: 1rem 3rem;
-  color: #2B5ADB;
-  border: .4rem solid #2B5ADB;
-  border-radius: .4rem;
-  background-color: #EFF4FC;
-  background-image: linear-gradient(#EFF4FC, #879FE8);
-  font-size: 2.4rem;
-  font-weight: 800;
-  font-style: italic;
-  text-decoration: none;
-  box-shadow: .6rem .6rem .2rem .1rem rgba(44, 90, 216, .4);
-  transition: all .3s;
-  outline: none;
-
-  &:active,
-  &:focus {
-    color: #2B5ADB;
-    background-color: #EFF4FC;
-    background-image: linear-gradient(#EFF4FC, #879FE8);
-  }
-
-  &:hover {
-    color: #EFF4FC;
-    background-color: #2B5ADB;
-    background-image: none;
-  }
-
-  @media only screen and (max-width: 767px) {
-    margin-top: 2rem;
-    margin-left: 0;
-  }
+  font-size: 1.6rem;
+  line-height: 3.2rem;
 `
 
 const BannerInfo = styled.div`
@@ -140,7 +151,12 @@ const Banner = () => (
       title="云上有为，未来无界，2021 ECUG Con 全球技术大会"
     />
 
-    <BannerDescWrapper>
+    <BannerNotice>
+    【延期通知】各位亲爱的 ECUG 伙伴，由于疫情反复，刚接到上级管理部门通知，原定 1 月 16-17 日在上海举行的 ECUG 全球技术大会被暂时叫停，将依据疫情防控要求另择时间，暂定三月份。非常感谢大家一直以来对 ECUG 的支持和理解，我们会为报名的观众和合作伙伴保留席位，期待与您来年相约上海。
+    </BannerNotice>
+
+    {/* https://jira.qiniu.io/browse/BO-15501 */}
+    {/* <BannerDescWrapper>
       <BannerDescItem>
         中国&nbsp;&middot;&nbsp;上海
       </BannerDescItem>
@@ -157,7 +173,7 @@ const Banner = () => (
       title="点击抢购 - 早鸟票"
     >
       点击抢购 - 早鸟票
-    </BannerBuyBtn>
+    </BannerBuyBtn> */}
 
     <BannerInfo>
       <div>

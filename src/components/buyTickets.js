@@ -32,7 +32,7 @@ const BuyTicketsButton = styled.a`
 const BuyTickets = () => (
   <BuyTicketsContainer className="section buy-ticket">
     <BuyTicketsButton
-      href="https://sensors.qiniu.com/t/a1K"
+      href="http://hdxu.cn/hwkZX"
       target="_blank"
       rel="noreferrer noopener"
       title="点击抢购 - 早鸟票"

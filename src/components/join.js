@@ -32,7 +32,7 @@ const JoinHotIcon = styled.div`
   background-repeat: no-repeat;
   background-image: url(${IconJoinHot});
 
-  transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);
 `
 
 const JoinInner = styled.div`

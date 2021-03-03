@@ -109,7 +109,7 @@ const Footer = () => (
       <FooterTraffic>
         <Title>交通指南</Title>
         <FooterTrafficLink
-          href={`https://api.map.baidu.com/geocoder?address=${encodeURIComponent('上海市静安区万荣路1053号')}&output=html&src=webapp.baidu.openAPIdemo`}
+          href={`https://api.map.baidu.com/geocoder?address=${encodeURIComponent('上海市长宁区协和路1102号')}&output=html&src=webapp.baidu.openAPIdemo`}
           target="_blank"
           rel="noreferrer noopener"
         >
@@ -120,9 +120,9 @@ const Footer = () => (
           />
         </FooterTrafficLink>
         <br />
-        会议时间：2021 年 1 月 16 日 - 17 日
+        会议时间：2021 年 4 月 10 日 - 11 日
         <br />
-        会议地址：上海市静安区万荣路 1053 号第一车间（静安新业坊）
+        会议地址：上海市长宁区协和路 1102 号建滔诺富特酒店
       </FooterTraffic>
 
       <FooterQrcode>

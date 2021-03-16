@@ -73,7 +73,7 @@ const ThemesItemTitle = styled.h2`
 
 const data = [
   { title: '云计算', icon: IconCalc },
-  { title: '数据', icon: IconData },
+  { title: '人工智能与大数据', icon: IconData },
   { title: '区块链', icon: IconBlock }
 ]
 
